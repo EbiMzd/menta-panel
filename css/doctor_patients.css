@@ -1,0 +1,136 @@
+/* =========================
+   Header – Patients
+========================= */
+.dashboard-header .search-box {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: var(--clr-white);
+    padding: 0.6rem 0.9rem;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--box-shadow);
+  }
+  
+  .dashboard-header .search-box span {
+    font-size: 1.2rem;
+    color: var(--clr-dark-variant);
+  }
+  
+  .dashboard-header .search-box input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 0.85rem;
+    width: 180px;
+    color: var(--clr-dark);
+  }
+  
+  
+  /* =========================
+     Filters
+  ========================= */
+  .filters {
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: var(--section-gap);
+    flex-wrap: wrap;
+  }
+  
+  .filters button {
+    padding: 0.45rem 1.1rem;
+    font-size: 0.8rem;
+    border-radius: var(--border-radius-sm);
+    background: var(--clr-white);
+    color: var(--clr-dark-variant);
+    box-shadow: var(--box-shadow);
+    transition: 0.3s ease;
+  }
+  
+  .filters button.active,
+  .filters button:hover {
+    background: var(--clr-primary);
+    color: #fff;
+  }
+  
+  
+  /* =========================
+     Patients Table
+  ========================= */
+  .patients table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--clr-white);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .patients th {
+    padding: 1.1rem;
+    font-size: 0.8rem;
+    background: var(--clr-light);
+    text-align: center;
+  }
+  
+  .patients td {
+    padding: 0.95rem;
+    font-size: 0.85rem;
+    text-align: center;
+    border-bottom: 1px solid var(--clr-light);
+    color: var(--clr-dark-variant);
+  }
+  
+  .patients tr:last-child td {
+    border-bottom: none;
+  }
+  
+  
+  /* =========================
+     Status Badges
+  ========================= */
+  .status {
+    display: flex;
+    padding: 0.25rem 0.8rem;
+    border-radius: 1rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+  
+  .status.active {
+    background: rgba(78, 159, 61, 0.15);
+    color: var(--clr-success);
+  }
+  
+  .status.waiting {
+    background: rgba(251, 192, 45, 0.2);
+    color: var(--clr-warning);
+  }
+  
+  .status.inactive {
+    background: rgba(255, 119, 130, 0.18);
+    color: var(--clr-danger);
+  }
+  
+  
+  /* =========================
+     Table Actions
+  ========================= */
+  .patients td button {
+    padding: 0.35rem 0.8rem;
+    font-size: 0.7rem;
+    border-radius: var(--border-radius-sm);
+  }
+  
+  .patients td button.outline {
+    background: transparent;
+    color: var(--clr-primary);
+    border: 1px solid var(--clr-primary);
+  }
+  
+  .patients td button.outline:hover {
+    background: var(--clr-primary);
+    color: #fff;
+  }
+  
+  
+ 

@@ -1,0 +1,165 @@
+
+/* =========================
+   Header (Admin)
+========================= */
+
+.admin-dashboard .notification-btn .badge {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+
+  background: var(--clr-danger);
+  color: #fff;
+  font-size: .65rem;
+  padding: .2rem .45rem;
+  border-radius: 1rem;
+}
+
+/* =========================
+   System Alerts
+========================= */
+
+.admin-dashboard .system-alerts {
+  margin-top: var(--section-gap);
+}
+
+.admin-dashboard .system-alerts h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.admin-dashboard .alert {
+  background: var(--clr-white);
+  padding: 1rem 1.2rem;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--box-shadow);
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  margin-bottom: .8rem;
+}
+
+.admin-dashboard .alert span {
+  font-size: 1.6rem;
+}
+
+.admin-dashboard .alert.warning span {
+  color: var(--clr-warning);
+}
+
+.admin-dashboard .alert.danger span {
+  color: var(--clr-danger);
+}
+
+.admin-dashboard .alert p {
+  flex: 1;
+  font-size: .85rem;
+}
+
+.admin-dashboard .alert button {
+  font-size: .75rem;
+  padding: .35rem .9rem;
+}
+
+/* =========================
+   Recent Activity
+========================= */
+
+.admin-dashboard .recent-activity {
+  margin-top: var(--section-gap);
+}
+
+.admin-dashboard .recent-activity h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.admin-dashboard .recent-activity table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--clr-white);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+}
+
+.admin-dashboard .recent-activity thead {
+  background: var(--soft-green-bg);
+}
+
+.admin-dashboard .recent-activity th,
+.admin-dashboard .recent-activity td {
+  padding: 1.1rem;
+  font-size: .85rem;
+  text-align: center;
+}
+
+.admin-dashboard .recent-activity tbody tr:not(:last-child) {
+  border-bottom: 1px solid var(--clr-light);
+}
+
+/* =========================
+   RIGHT PANEL
+========================= */
+
+/* ===== Financial Summary ===== */
+
+.right-panel .finance-summary {
+  background: var(--clr-white);
+  padding: var(--card-padding);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--box-shadow);
+}
+
+.right-panel .finance-summary h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.right-panel .finance-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  padding: .9rem;
+  border-radius: var(--border-radius-md);
+  background: var(--clr-light);
+  margin-bottom: .8rem;
+}
+
+.right-panel .finance-card span {
+  font-size: 1.8rem;
+  color: var(--clr-primary);
+}
+
+.right-panel .finance-card strong {
+  font-size: .9rem;
+}
+
+.right-panel .finance-card.warning span { color: var(--clr-warning); }
+.right-panel .finance-card.danger span { color: var(--clr-danger); }
+
+/* ===== Finance Actions ===== */
+
+.right-panel .finance-actions {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+}
+
+.right-panel .primary-btn.full,
+.right-panel .outline-btn.full {
+  width: 100%;
+  padding: .8rem;
+  font-size: .85rem;
+  border-radius: .7rem;
+}
+
+.right-panel .outline-btn {
+  background: transparent;
+  border: 1px solid var(--clr-primary);
+  color: var(--clr-primary);
+}
+

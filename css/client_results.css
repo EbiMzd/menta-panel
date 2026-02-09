@@ -1,0 +1,141 @@
+  
+/* =========================
+   PAGE: CLIENT RESULTS
+========================= */
+
+.client-results .tests button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+.client-results .tests button:hover:not(:disabled) {
+  opacity: .85;
+}
+
+/* Result Meta */
+.client-results .result-meta {
+  margin-top: 2rem;
+}
+
+.client-results .result-meta h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.client-results .result-table {
+  width: 100%;
+  background: var(--white);
+  border-radius: 1.2rem;
+  box-shadow: var(--shadow);
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+}
+
+.client-results .result-table tr:not(:last-child) th,
+.client-results .result-table tr:not(:last-child) td {
+border-bottom: 1px solid rgba(0,0,0,.05);
+}
+
+.client-results .result-table th,
+.client-results .result-table td {
+  padding: 1.2rem 1.4rem;
+  border-bottom: 1px solid #eee;
+  text-align: right;
+}
+
+.client-results .result-table th {
+  width: 28%;
+  background: rgba(216, 233, 168, 0.35);
+  font-weight: 600;
+  color: var(--dark);
+  white-space: nowrap;
+}
+
+.client-results .result-table td {
+  color: var(--gray);
+}
+  
+.client-results .result-table td .done {
+  color: var(--success);
+  font-weight: 600;
+}
+
+/* answer section*/
+.client-results .answers-section {
+  margin-top: 2.3rem;
+}
+
+.client-results .answers-section h2{
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.client-results .answers-table {
+  overflow-x: auto;
+}
+
+.client-results .answers-table table {
+  width: 100%;
+  background: var(--white);
+  border-radius: 1.2rem;
+  box-shadow: var(--shadow);
+  border-collapse: collapse;
+  border-spacing: 0;
+  overflow: hidden;
+}
+
+.client-results .answers-table thead {
+  background: rgba(0,0,0,.04);
+}
+
+.client-results .answers-table th,
+.client-results .answers-table td {
+  padding: 1rem 1.2rem;
+  font-size: .9rem;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.client-results .answer-correct {
+  color: var(--success);
+  font-weight: bold;
+}
+
+.client-results .answer-wrong {
+  color: var(--danger);
+  font-weight: bold;
+}
+
+/* Doctor Comment */
+.client-results .doctor-section {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+.client-results .doctor-section h2{
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.client-results .doctor-comment-box {
+  background: var(--white);
+  padding: 1.8rem 2rem;
+  border-radius: 1.2rem;
+  box-shadow: var(--shadow);
+  line-height: 1.9;
+  color: var(--dark);
+}
+
+.client-results .doctor-comment-box p {
+  font-size: .95rem;
+}
+
+.client-results .comment-date {
+  display: block;
+  margin-top: 1rem;
+  font-size: .8rem;
+  color: var(--gray);
+  text-align: left;
+
+}
+

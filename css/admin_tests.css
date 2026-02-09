@@ -1,0 +1,110 @@
+/* ============================
+   Tests Page - Right Panel
+============================ */
+
+.tests-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+/* ===== Panel Box ===== */
+.tests-panel .panel-box {
+    background: var(--clr-white);
+    border-radius: var(--border-radius-lg);
+    padding: 1.4rem;
+    box-shadow: var(--box-shadow);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.tests-panel .panel-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1.8rem 2.8rem var(--clr-light);
+}
+
+/* ===== Title ===== */
+.tests-panel .panel-box h3 {
+    font-size: .95rem;
+    font-weight: 600;
+    color: var(--clr-dark);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+/* ============================
+   Quick Analysis
+============================ */
+
+.tests-panel .panel-box ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+}
+
+.tests-panel .panel-box ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: .8rem;
+    color: var(--clr-dark-variant);
+    background: var(--clr-bg);
+    padding: .55rem .8rem;
+    border-radius: var(--border-radius-md);
+}
+
+.tests-panel .panel-box ul li strong {
+    font-size: .85rem;
+    font-weight: 600;
+    color: var(--clr-dark);
+}
+
+/* ============================
+   Alerts Section
+============================ */
+
+.tests-panel .panel-box p {
+    font-size: .8rem;
+    color: var(--clr-dark-variant);
+    padding: .6rem .8rem;
+    border-radius: var(--border-radius-md);
+    background: rgba(251, 192, 45, 0.15);
+    margin-bottom: .6rem;
+}
+
+.tests-panel .panel-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* ============================
+   Quick Controls
+============================ */
+
+.tests-panel .panel-box button {
+    margin-top: .6rem;
+}
+
+.tests-panel .panel-box .primary-btn.full {
+    width: 100%;
+    height: 42px;
+    font-size: .8rem;
+    border-radius: var(--border-radius-md);
+}
+
+.tests-panel .panel-box .outline-btn.full {
+    width: 100%;
+    height: 42px;
+    font-size: .8rem;
+    border-radius: var(--border-radius-md);
+    background: transparent;
+    border: 1px solid var(--clr-primary);
+    color: var(--clr-primary);
+    transition: background .2s ease, color .2s ease;
+}
+
+.tests-panel .panel-box .outline-btn.full:hover {
+    background: var(--clr-primary);
+    color: #fff;
+}

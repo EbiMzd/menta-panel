@@ -1,0 +1,79 @@
+.table table .warning{
+  background: rgba(143, 1, 13, 0.521);
+  font-weight: 600;
+  width: 57%;
+  height: 27%;
+}
+
+  /* ===============================
+     Right Panel (Sessions)
+  ================================ */
+  .sessions-advanced-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .sessions-advanced-panel .panel-box {
+    background: var(--clr-white);
+    padding: 1.3rem;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow);
+  }
+  
+  .sessions-advanced-panel h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* ===== Quick Stats ===== */
+  .quick-stats {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+    font-size: .85rem;
+  }
+  
+  .quick-stats strong {
+    color: var(--clr-primary);
+  }
+  
+  /* ===== Alerts ===== */
+  .alert-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+    font-size: .85rem;
+  }
+  
+  .alert-list li.warning {
+    color: var(--clr-warning);
+  }
+  
+  .alert-list li.danger {
+    color: var(--clr-danger);
+  }
+  
+  /* ===== Control Actions ===== */
+  .control-actions {
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+  }
+  
+  .control-actions button {
+    width: 100%;
+    font-size: .85rem;
+  }
+  
+  /* ===============================
+     Dark Theme Tweaks
+  ================================ */
+  [data-theme="dark"] .toolbar,
+  [data-theme="dark"] .table table,
+  [data-theme="dark"] .sessions-advanced-panel .panel-box {
+    background: var(--clr-white);
+  }
+  

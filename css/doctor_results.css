@@ -1,0 +1,207 @@
+/* =========================
+   Doctor Results Page
+========================= */
+
+/* Layout tweak */
+.doctor-results main {
+    margin-top: 2rem;
+  }
+  
+  /* =========================
+     Filters
+  ========================= */
+  .filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .filters input,
+  .filters select {
+    background: var(--clr-white);
+    border: none;
+    padding: 0.7rem 1rem;
+    border-radius: var(--border-radius-sm);
+    box-shadow: var(--box-shadow);
+    font-size: 0.85rem;
+    color: var(--clr-dark);
+    min-width: 180px;
+  }
+  
+  .filters input::placeholder {
+    color: var(--clr-dark-variant);
+  }
+  
+  /* =========================
+     Result Details Wrapper
+  ========================= */
+  .result-details {
+    margin-top: var(--section-gap);
+  }
+  
+  /* =========================
+     Result Meta Table
+  ========================= */
+  .result-table {
+    width: 100%;
+    background: var(--clr-white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow);
+    border-collapse: collapse;
+    overflow: hidden;
+  }
+  
+  .result-table th,
+  .result-table td {
+    padding: 1.1rem 1.2rem;
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--clr-light);
+    text-align: right;
+  }
+  
+  .result-table th {
+    width: 30%;
+    font-weight: 600;
+    background: rgba(216, 233, 168, 0.35); /* light-green soft */
+    color: var(--clr-dark);
+  }
+  
+  .result-table tr:last-child th,
+  .result-table tr:last-child td {
+    border-bottom: none;
+  }
+  
+  /* =========================
+     Answers Section
+  ========================= */
+  .answers-section {
+    margin-top: var(--section-gap);
+  }
+  
+  .answers-section h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  /* Answers Table */
+  .answers-table table {
+    width: 100%;
+    background: var(--clr-white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow);
+    border-collapse: collapse;
+    overflow: hidden;
+  }
+  
+  .answers-table th,
+  .answers-table td {
+    padding: 1rem;
+    font-size: 0.85rem;
+    text-align: center;
+    border-bottom: 1px solid var(--clr-light);
+  }
+  
+  .answers-table th {
+    background: var(--clr-light);
+    color: var(--clr-dark);
+  }
+  
+  .answers-table tr:last-child td {
+    border-bottom: none;
+  }
+  
+  /* Answer states */
+  .answer-correct {
+    color: var(--clr-success);
+    font-weight: 600;
+  }
+  
+  .answer-wrong {
+    color: var(--clr-warning);
+    font-weight: 600;
+  }
+  
+  /* =========================
+     Doctor Comment Section
+  ========================= */
+  .doctor-section {
+    margin-top: var(--section-gap);
+  }
+  
+  .doctor-section h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .doctor-comment-box {
+    background: var(--clr-white);
+    padding: 1.5rem;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow);
+  }
+  
+  .doctor-comment-box textarea {
+    width: 100%;
+    min-height: 120px;
+    resize: vertical;
+    border: none;
+    background: var(--clr-bg);
+    border-radius: var(--border-radius-sm);
+    padding: 1rem;
+    font-family: inherit;
+    font-size: 0.85rem;
+    color: var(--clr-dark);
+    margin-bottom: 1rem;
+  }
+  
+  .doctor-comment-box textarea::placeholder {
+    color: var(--clr-dark-variant);
+  }
+  
+  /* Comment actions */
+  .comment-actions {
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  .comment-actions .secondary {
+    background: transparent;
+    color: var(--clr-primary);
+    border: 1px solid var(--clr-primary);
+  }
+  
+  /* Date */
+  .comment-date {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--clr-dark-variant);
+  }
+  
+  /* =========================
+     View Button (Table)
+  ========================= */
+  .view-result {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.9rem;
+  }
+  
+  /* =========================
+     Responsive
+  ========================= */
+  @media (max-width: 768px) {
+    .filters {
+      flex-direction: column;
+    }
+  
+    .filters input,
+    .filters select {
+      width: 100%;
+    }
+  
+    .doctor-results.container {
+      grid-template-columns: 1fr;
+    }
+ 
+  }
+  

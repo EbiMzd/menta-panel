@@ -1,0 +1,166 @@
+/* =========================
+   Header Actions (Search + Add)
+========================= */
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: var(--clr-white);
+    padding: 0.4rem 0.8rem;
+    border-radius: var(--border-radius-sm);
+    box-shadow: var(--box-shadow);
+  }
+  
+  .search-box span {
+    font-size: 1.2rem;
+    color: var(--clr-dark-variant);
+  }
+  
+  .search-box input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 0.85rem;
+    width: 160px;
+    color: var(--clr-dark);
+  }
+  
+  .primary-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  
+  .primary-btn span {
+    font-size: 1.2rem;
+  }
+  
+  /* =========================
+     Filters
+  ========================= */
+  .filters {
+    display: flex;
+    gap: 0.6rem;
+    margin-bottom: 1.8rem;
+    flex-wrap: wrap;
+  }
+  
+  .filters button {
+    background: var(--clr-white);
+    color: var(--clr-dark-variant);
+    border: 1px solid var(--clr-light);
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .filters button.active,
+  .filters button:hover {
+    background: rgba(78, 159, 61, 0.15);
+    color: var(--clr-primary);
+    border-color: var(--clr-primary);
+  }
+  
+  /* =========================
+     Sessions Table
+  ========================= */
+  .sessions table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--clr-white);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    font-size: 0.85rem;
+  }
+  
+  .sessions thead {
+    background: var(--clr-light);
+  }
+  
+  .sessions th {
+    padding: 1.1rem;
+    font-weight: 600;
+    color: var(--clr-dark);
+    text-align: center;
+  }
+  
+  .sessions td {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid var(--clr-light);
+    color: var(--clr-dark-variant);
+  }
+  
+  .sessions tr:last-child td {
+    border-bottom: none;
+  }
+  
+  /* =========================
+     Session Status
+  ========================= */
+  .status {
+    font-weight: 600;
+    font-size: 0.75rem;
+  }
+  
+  .status.today {
+    color: var(--clr-primary);
+  }
+  
+  .status.pending {
+    color: var(--clr-warning);
+  }
+  
+  .status.done {
+    color: var(--clr-success);
+  }
+  
+  .status.cancelled {
+    color: var(--clr-danger);
+  }
+  
+  /* =========================
+     Action Buttons
+  ========================= */
+  .sessions button {
+    padding: 0.35rem 0.8rem;
+    font-size: 0.75rem;
+  }
+  
+  .sessions button.outline {
+    background: transparent;
+    border: 1px solid var(--clr-primary);
+    color: var(--clr-primary);
+  }
+  
+  .sessions button.outline:hover {
+    background: var(--clr-primary);
+    color: #fff;
+  }
+  
+  /* =========================
+     Responsive
+  ========================= */
+  @media (max-width: 1200px) {
+    .doctor-dashboard.container {
+      grid-template-columns: 16rem auto;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .doctor-dashboard.container {
+      grid-template-columns: 1fr;
+    }
+  
+    .search-box {
+      display: none;
+    }
+  
+    .filters {
+      gap: 0.4rem;
+    }
+  }
+  

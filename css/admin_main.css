@@ -1,0 +1,322 @@
+main {
+    margin-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+/* =========================
+Header (Layout)
+========================= */
+
+.dashboard-header {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 1.8rem;
+}
+  
+.header-top {
+    display: flex;
+    justify-content: space-between;
+}
+  
+.header-top .title-box p {
+    font-size: .9rem;
+    color: var(--clr-dark-variant);
+    margin-top: .4rem;
+}
+
+.dashboard-header .primary-btn, .notification-btn {
+    position: relative;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: none;
+    background: var(--clr-white);
+    box-shadow: var(--box-shadow);
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard-header .primary-btn span.material-symbols-sharp, .notification-btn span.material-symbols-sharp{
+    font-size: 1.4rem;
+    color: var(--clr-primary);
+}
+
+/* =========================
+    Header Stats
+========================= */
+
+  
+.overview {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.6rem;
+    margin-bottom: var(--section-gap);
+}
+
+.overview .card {
+    position: relative;
+    background: var(--clr-white);
+    padding: var(--card-padding);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+  
+.overview .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 2.2rem 3.2rem var(--clr-light);
+}
+
+.overview .card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(
+      to left,
+      rgba(78, 159, 61, 0.45),
+      rgba(78, 159, 61, 0.1)
+    );
+}
+
+.overview .card span {
+    font-size: 2rem;
+    color: var(--clr-primary);
+}
+  
+.overview .card.success span { color: var(--clr-success); }
+.overview .card.warning span { color: var(--clr-warning); }
+.overview .card.danger  span { color: var(--clr-danger); }
+.overview .card span h3 {
+    font-size: .9rem;
+    color: var(--clr-dark-variant);
+    margin-bottom: .6rem;
+}
+  
+.overview .card h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--clr-dark);
+}
+
+.overview .card.success::before {
+    background: linear-gradient(
+      to left,
+      rgba(65,241,182,.6),
+      rgba(65,241,182,.15)
+    );
+}
+  
+.overview .card.warning::before {
+    background: linear-gradient(
+      to left,
+      rgba(251,192,45,.6),
+      rgba(251,192,45,.15)
+    );
+}
+  
+.overview .card.danger::before {
+    background: linear-gradient(
+      to left,
+      rgba(255,119,130,.6),
+      rgba(255,119,130,.15)
+    );
+}
+
+.overview .card .trend {
+    position: absolute;
+    bottom: 1.2rem;
+    left: 1.4rem;
+    font-size: .75rem;
+    font-weight: 500;
+    opacity: .9;
+}
+  
+.overview .card .trend.up {
+    color: var(--clr-success);
+}
+  
+.overview .card .trend.down {
+    color: var(--clr-danger);
+}
+
+.overview .card .trend {
+    color: var(--clr-dark-variant);
+}
+
+
+  
+/* =========================
+     Toolbar
+========================= */
+
+.toolbar-wrapper{
+    margin-bottom: var(--section-gap);
+}
+
+.toolbar-wrapper .toolbar{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--clr-white);
+    padding: 1rem 1.4rem;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow);
+}
+  
+  /* Search box */
+.toolbar-wrapper .toolbar .search-box {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+  
+    background: var(--clr-bg);
+    padding: .6rem .9rem;
+    border-radius: var(--border-radius-md);
+}
+  
+.toolbar-wrapper .toolbar .search-box span {
+    font-size: 1.2rem;
+    color: var(--clr-dark-variant);
+}
+  
+.toolbar-wrapper .toolbar .search-box input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    color: var(--clr-dark);
+    font-size: .85rem;
+}
+  
+.toolbar-wrapper .toolbar .search-box input::placeholder {
+    color: var(--clr-dark-variant);
+}
+  
+.toolbar-wrapper .toolbar .search-box input:focus {
+    outline: none;
+}
+  
+  /* Selects */
+.toolbar-wrapper .toolbar select {
+    padding: .55rem .9rem;
+    border-radius: var(--border-radius-md);
+    border: 1px solid var(--clr-light);
+    background: var(--clr-bg);
+    color: var(--clr-dark);
+    font-size: .8rem;
+    cursor: pointer;
+}
+  
+.toolbar-wrapper .toolbar select:focus {
+    outline: none;
+    border-color: var(--clr-primary);
+}
+
+/* =========================
+   RIGHT PANEL
+========================= */
+
+.right-panel {
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+  
+  /* ===============================
+     Status Badges
+  ================================ */
+.table table .status-badge {
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+  
+.table table .status-badge.active {
+    background: rgba(65, 241, 182, 0.15);
+    color: var(--clr-success);
+}
+  
+.table table .status-badge.in-treatment {
+    background: rgba(78, 159, 61, 0.15);
+    color: var(--clr-primary);
+}
+  
+.table table .status-badge.completed {
+    background: rgba(251, 192, 45, 0.2);
+    color: var(--clr-warning);
+}
+  
+.table table .status-badge.blocked {
+    background: rgba(255, 119, 130, 0.2);
+    color: var(--clr-danger);
+}
+
+@media(max-width: 768px){
+    .overview {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+    
+      .overview .card {
+        padding: 1rem;
+      }
+    
+      .overview h3 {
+        font-size: .8rem;
+      }
+    
+      .overview h1 {
+        font-size: 1.4rem;
+      }
+      /*  Toolbar  */
+      .toolbar-wrapper .toolbar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.8rem;
+        padding: 1rem;
+      }
+    
+      /* Search full width */
+      .toolbar-wrapper .toolbar .search-box {
+        width: 100%;
+      }
+    
+      /* Filters container behavior */
+      .toolbar-wrapper .toolbar select {
+        width: 100%;
+        font-size: 0.85rem;
+      }
+      .toolbar-wrapper .toolbar {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    
+      .toolbar-wrapper .toolbar .search-box {
+        grid-column: 1 / -1;
+      }
+}
+
+@media (max-width: 480px) {
+
+    .toolbar-wrapper .toolbar {
+      padding: 0.9rem;
+    }
+  
+    .toolbar-wrapper .toolbar .search-box {
+      padding: 0.7rem 0.9rem;
+    }
+  
+    .toolbar-wrapper .toolbar select {
+      padding: 0.6rem 0.8rem;
+    }
+  }

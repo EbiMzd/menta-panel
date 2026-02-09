@@ -1,0 +1,77 @@
+/* ===== Rating ===== */
+.table .rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-weight: 600;
+  color: var(--clr-warning);
+}
+
+.table .rating span.material-symbols-sharp {
+  font-size: 1.2rem;
+}
+
+/* ===== Link Button ===== */
+.table .link-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: 0.8rem;
+  color: var(--clr-primary);
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.table .link-btn:hover {
+  opacity: 0.7;
+}
+
+/* =========================
+   Right Panel
+========================= */
+.doctors-insights {
+  background: var(--clr-white);
+  border-radius: var(--border-radius-lg);
+  padding: var(--card-padding);
+  box-shadow: var(--box-shadow);
+}
+
+.doctors-insights h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+}
+
+/* ===== Insight Card ===== */
+.doctors-insights .insight-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem 1rem;
+  border-radius: var(--border-radius-md);
+  background: rgba(216, 233, 168, 0.35);
+  margin-bottom: 0.8rem;
+}
+
+.doctors-insights .insight-card span.material-symbols-sharp {
+  font-size: 1.6rem;
+  color: var(--clr-primary);
+}
+
+.doctors-insights .insight-card small {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--clr-dark-variant);
+}
+
+.doctors-insights .insight-card strong {
+  font-size: 1rem;
+}
+
+/* Variants */
+.doctors-insights .insight-card.warning {
+  background: rgba(251, 192, 45, 0.15);
+}
+
+.doctors-insights .insight-card.warning span {
+  color: var(--clr-warning);
+}

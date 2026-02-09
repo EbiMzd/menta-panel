@@ -1,0 +1,132 @@
+
+  /* =========================
+     Installments
+  ========================= */
+  .client-payments .installments {
+    margin-top: var(--section-gap);
+  }
+  
+  .client-payments .installments h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  
+  .client-payments .installment-card {
+    background: linear-gradient(
+    to bottom,
+    var(--clr-white),
+    var(--clr-bg)
+  );
+    padding: var(--card-padding);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow);
+    max-width: 480px;
+  }
+  
+  .client-payments .installment-card h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .client-payments .installment-info {
+    list-style: none;
+    margin-bottom: 1.2rem;
+  }
+  
+  .client-payments .installment-info li {
+    font-size: 0.85rem;
+    color: var(--clr-dark-variant);
+    padding: 0.35rem 0;
+    border-bottom: 1px dashed var(--clr-light);
+  }
+  
+  .client-payments .installment-info li:last-child {
+    border-bottom: none;
+  }
+  
+  
+  /* =========================
+     Insurance Section
+  ========================= */
+  .client-payments .insurance {
+    margin-top: var(--section-gap);
+  }
+  
+  .client-payments .insurance h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  
+  .client-payments .insurance-status,
+  .client-payments .insurance-request {
+    background: var(--clr-white);
+    padding: var(--card-padding);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow);
+    font-size: 0.9rem;
+  }
+  
+  .client-payments .insurance-status p {
+    margin-bottom: 0.4rem;
+  }
+  
+  .client-payments .insurance-status span {
+    font-size: 0.8rem;
+    color: var(--clr-dark-variant);
+  }
+  
+  /* Insurance state colors */
+  .client-payments .insurance-status.waiting {
+    border-right: 4px solid var(--clr-warning);
+  }
+  
+  .client-payments .insurance-status.approved {
+    border-right: 4px solid var(--clr-success);
+  }
+  
+  .client-payments .insurance-status.rejected {
+    border-right: 4px solid var(--clr-danger);
+  }
+  
+  
+  /* =========================
+     Invoices
+  ========================= */
+  .client-payments .invoices {
+    margin-top: var(--section-gap);
+  }
+  
+  .client-payments .invoices h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  
+  .client-payments .invoices table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--clr-white);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 1.5rem;
+  }
+  
+  .client-payments .invoices th {
+    padding: 1.1rem;
+    font-size: 0.85rem;
+    background: var(--clr-light);
+    text-align: center;
+  }
+  
+  .client-payments .invoices td {
+    padding: 1rem;
+    font-size: 0.85rem;
+    text-align: center;
+    color: var(--clr-dark-variant);
+    border-bottom: 1px solid var(--clr-light);
+  }
+  
+  .client-payments .invoices tr:last-child td {
+    border-bottom: none;
+  }
+  

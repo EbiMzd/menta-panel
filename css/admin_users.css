@@ -1,0 +1,193 @@
+
+/* =========================
+   USERS CONTROL PANEL
+========================= */
+
+.admin-users .users-control-panel > * {
+  background: linear-gradient(
+    180deg,
+    var(--clr-white),
+    rgba(78, 159, 61, 0.03)
+  );
+}
+
+.admin-users .users-control-panel {
+  background: var(--clr-white);
+  padding: 1.6rem;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--box-shadow);
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+/* Header */
+.admin-users .panel-header h3 {
+  font-size: 1.1rem;
+  color: var(--clr-dark);
+}
+
+/* Metric Card */
+.admin-users .metric-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: var(--clr-bg);
+  padding: 1rem;
+  border-radius: var(--border-radius-md);
+}
+
+.admin-users .metric-info small {
+  font-size: .7rem;
+  color: var(--clr-dark-variant);
+}
+
+.admin-users .metric-info strong {
+  font-size: 1.6rem;
+  color: var(--clr-success);
+}
+
+/* Progress Ring */
+.admin-users .progress-ring {
+  --size: 56px;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background:
+  conic-gradient(
+    var(--clr-primary) calc(var(--value) * 1%),
+    rgba(0,0,0,.08) 0
+  );
+  position: relative;
+}
+
+.admin-users .progress-ring::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  background: var(--clr-white);
+  box-shadow: inset 0 0 0 1px var(--clr-light);
+  border-radius: 50%;
+}
+
+/* Alert */
+.admin-users .alert-card {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+
+  padding: .9rem 1rem;
+  border-radius: var(--border-radius-md);
+  background: linear-gradient(
+    135deg,
+    rgba(255,119,130,.18),
+    rgba(255,119,130,.08)
+  );
+  border: 1px solid rgba(255,119,130,.25);
+}
+
+.admin-users .alert-card span {
+  color: #ff4d5a;
+  font-size: 1.6rem;
+}
+
+.admin-users .alert-card strong {
+  display: block;
+  font-size: .85rem;
+}
+
+.admin-users .alert-card small {
+  font-size: .7rem;
+  opacity: .8;
+}
+
+/* Activity */
+.admin-users .activity-card {
+  padding: .9rem 1rem;
+  background: var(--clr-bg);
+  border-radius: var(--border-radius-md);
+}
+
+.admin-users .activity-card strong {
+  display: block;
+  margin-top: .2rem;
+  color: var(--clr-primary);
+}
+
+/* Quick Actions */
+.admin-users .quick-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .6rem;
+}
+
+.admin-users .quick-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .4rem;
+
+  padding: .6rem;
+  border-radius: var(--border-radius-md);
+  background: var(--clr-bg);
+  font-size: .75rem;
+}
+
+.admin-users .quick-btn.success span {
+  color: var(--clr-primary);
+}
+
+.admin-users .quick-btn.danger span {
+  color: #ff4d5a;
+}
+.admin-users .quick-btn.success {
+  background: linear-gradient(
+    135deg,
+    #4E9F3D,
+    #41f1b6
+  );
+  color: #fff;
+  font-weight: 500;
+  box-shadow: 0 6px 16px rgba(78,159,61,.25);
+  color: var(--clr-dark);
+}
+
+.admin-users .quick-btn.danger{
+  border: 1px solid var(--clr-light);
+  background: linear-gradient(
+    135deg,
+    rgba(255,119,130,.18),
+    rgba(255,119,130,.08)
+  );
+  color: var(--clr-dark);
+}
+
+.admin-users .quick-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0,0,0,.08);
+}
+
+.admin-users .quick-btn.success:hover {
+  box-shadow: 0 10px 22px rgba(78,159,61,.35);
+}
+
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 1200px) {
+  .admin-users.container {
+    grid-template-columns: 6rem auto;
+  }
+
+  .right-panel {
+    display: none;
+  }
+
+  .header-stats {
+    display: none;
+  }
+}

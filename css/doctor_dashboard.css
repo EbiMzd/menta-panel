@@ -1,0 +1,130 @@
+
+  /* =========================
+     Header – Quick Actions
+  ========================= */
+  .doctor-dashboard .quick-action {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: none;
+    background: var(--clr-white);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.25s;
+  }
+  
+  .doctor-dashboard .quick-action span {
+    font-size: 1.4rem;
+    color: var(--clr-primary);
+  }
+  
+  .doctor-dashboard .quick-action:hover {
+    background: var(--clr-primary);
+  }
+  
+  .doctor-dashboard .quick-action:hover span {
+    color: #fff;
+  }
+  
+  
+  /* =========================
+     Notifications
+  ========================= */
+  .notification-btn {
+    position: relative;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: none;
+    background: var(--clr-white);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .notification-btn span {
+    font-size: 1.4rem;
+    color: var(--clr-primary);
+  }
+  
+  .notification-btn .badge {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: var(--clr-danger);
+    color: #fff;
+    font-size: 0.65rem;
+    padding: 2px 6px;
+    border-radius: 999px;
+    line-height: 1;
+  }
+  
+  
+  /* =========================
+     Actions Required
+  ========================= */
+  .actions-required {
+    margin-bottom: var(--section-gap);
+  }
+  
+  .actions-required h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  
+  .action-card {
+    background: var(--clr-white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow);
+    padding: 1.2rem 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .action-card span.material-symbols-sharp {
+    font-size: 2rem;
+    color: var(--clr-primary);
+  }
+  
+  .action-card div {
+    flex: 1;
+  }
+  
+  .action-card strong {
+    display: block;
+    font-size: 0.95rem;
+    margin-bottom: 0.2rem;
+  }
+  
+  .action-card p {
+    font-size: 0.8rem;
+    color: var(--clr-dark-variant);
+  }
+  
+  .action-card.warning {
+    border-right: 4px solid var(--clr-warning);
+  }
+  
+  
+  /* =========================
+     Tables – Minor Doctor Tweaks
+  ========================= */
+  .doctor-dashboard .tests {
+    margin-bottom: var(--section-gap);
+  }
+  
+  .doctor-dashboard .tests h2 {
+    font-size: 1.4rem;
+  }
+  
+  .doctor-dashboard .tests td button {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.9rem;
+  }
+  

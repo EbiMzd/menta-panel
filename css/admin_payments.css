@@ -1,0 +1,118 @@
+/* =========================
+   Payments Right Panel
+========================= */
+
+.right-panel.payments-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+  
+  /* =========================
+     Panel Box
+  ========================= */
+  
+  .payments-panel .panel-box {
+    background: var(--clr-white);
+    padding: 1.4rem;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow);
+  }
+  
+  .payments-panel .panel-box h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--clr-dark);
+  }
+  
+  /* =========================
+     Settlement Box
+  ========================= */
+  
+  .payments-panel .panel-box p {
+    font-size: 0.85rem;
+    color: var(--clr-dark-variant);
+    margin-bottom: 1rem;
+  }
+  
+  /* =========================
+     Commission List
+  ========================= */
+  
+  .payments-panel ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .payments-panel ul li {
+    font-size: 0.85rem;
+    color: var(--clr-dark-variant);
+    padding: 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .payments-panel ul li strong {
+    color: var(--clr-dark);
+    font-weight: 600;
+  }
+  
+  /* =========================
+     Buttons (Full Width)
+  ========================= */
+  
+  .payments-panel .primary-btn.full,
+  .payments-panel .outline-btn.full {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.65rem;
+    font-size: 0.85rem;
+    border-radius: var(--border-radius-md);
+    cursor: pointer;
+  }
+  
+  /* Outline Button (override if needed) */
+  .payments-panel .outline-btn {
+    background: transparent;
+    border: 1px solid var(--clr-primary);
+    color: var(--clr-primary);
+  }
+  
+  .payments-panel .outline-btn:hover {
+    background: rgba(78, 159, 61, 0.08);
+  }
+  
+  /* =========================
+     Panel Box Variations
+  ========================= */
+  
+  /* Settlement emphasis */
+  .payments-panel .panel-box:first-child {
+    border-right: 4px solid var(--clr-warning);
+  }
+  
+  /* Commission emphasis */
+  .payments-panel .panel-box:nth-child(2) {
+    border-right: 4px solid var(--clr-primary);
+  }
+  
+  /* Report emphasis */
+  .payments-panel .panel-box:last-child {
+    border-right: 4px solid var(--clr-success);
+  }
+  
+  /* =========================
+     Responsive Safety
+  ========================= */
+  
+  @media (max-width: 1200px) {
+    .right-panel.payments-panel {
+      display: none;
+    }
+  }
+  

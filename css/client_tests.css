@@ -1,0 +1,43 @@
+
+/* =========================
+   PAGE: CLIENT TESTS
+========================= */
+.client-tests .suggested-tests {
+  margin-top: var(--section-gap);
+}
+
+.client-tests .suggested-tests h2 {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.client-tests .suggested-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.6rem;
+}
+
+.client-tests .suggested-card {
+  background: var(--clr-white);
+  padding: var(--card-padding);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+}
+
+.client-tests .suggested-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: .4rem;
+}
+
+.client-tests .suggested-card p {
+  font-size: .85rem;
+  color: var(--clr-dark-variant);
+  margin-bottom: .6rem;
+}
+
+.client-tests .suggested-card span {
+  display: block;
+  font-size: .75rem;
+  margin-bottom: .8rem;
+}
