@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>نتایج آزمون‌ها | پنل دکتر</title>
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" />
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="./css/doctor_results.css" />
+  <link rel="stylesheet" href="./css/admin_main.css">
+</head>
+
+<body>
+
+<div class="doctor-results container">
+
+  <!-- ================= Sidebar ================= -->
+  <aside   class="sidebar-area">
+    <div class="top">
+      <h2>پنل دکتر</h2>
+    </div>
+
+    <div class="user-card">
+      <div class="avatar-wrapper">
+        <span class="material-symbols-sharp">medical_services</span>
+      </div>
+      <div class="user-info">
+        <strong class="user-name">دکتر سارا محمدی</strong>
+        <span class="user-email">doctor@gmail.com</span>
+      </div>
+    </div>
+
+    <nav class="sidebar">
+        <div class="menu-group">
+          <a href="./doctor_dashboard.html">
+            <span class="material-symbols-sharp">dashboard</span>
+            <h3>داشبورد</h3>
+          </a>
+  
+          <a href="./doctor_patients.html">
+            <span class="material-symbols-sharp">groups</span>
+            <h3>مراجعین</h3>
+          </a>
+  
+          <a class="active" href="./doctor_results.html">
+            <span class="material-symbols-sharp">assignment</span>
+            <h3>نتایج آزمون‌ها</h3>
+          </a>
+  
+          <a href="./doctor_sessions.html">
+            <span class="material-symbols-sharp">event</span>
+            <h3>جلسات</h3>
+          </a>
+        </div>
+  
+        <div class="menu-group secondary">
+          <a href="./doctor_profile.html">
+            <span class="material-symbols-sharp">person</span>
+            <h3>پروفایل</h3>
+          </a>
+  
+          <a class="logout">
+            <span class="material-symbols-sharp">logout</span>
+            <h3>خروج</h3>
+          </a>
+        </div>
+    </nav>
+  </aside>
+
+  <!-- ================= Main ================= -->
+  <main class="content-area">
+
+    <!-- Header -->
+    <header class="dashboard-header">
+               
+      <button class="menu-toggle" id="menuToggle">
+        <span class="material-symbols-sharp">menu</span>
+      </button>
+     
+      <div>
+        <h1>نتایج آزمون‌ها</h1>
+        <p class="page-desc">
+          بررسی پاسخ‌ها و ثبت نظر تخصصی
+        </p>
+      </div>
+
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle">
+          <span class="material-symbols-sharp">dark_mode</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ================= Filters ================= -->
+    <section class="filters">
+      <input type="text" placeholder="جستجوی نام مراجعه‌کننده یا آزمون">
+
+      <select>
+        <option value="">همه وضعیت‌ها</option>
+        <option value="waiting">در انتظار بررسی</option>
+        <option value="done">بررسی شده</option>
+      </select>
+
+      <select>
+        <option value="">همه آزمون‌ها</option>
+        <option>افسردگی بک</option>
+        <option>اضطراب</option>
+        <option>استرس</option>
+      </select>
+    </section>
+
+    <!-- ================= Results List ================= -->
+    <section class="table">
+      <h2>لیست آزمون‌ها</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>مراجعه‌کننده</th>
+            <th>آزمون</th>
+            <th>تاریخ</th>
+            <th>نمره</th>
+            <th>وضعیت</th>
+            <th>عملیات</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td data-label="مراجعه‌کننده">سمیه حسینی</td>
+            <td data-label="آزمون">افسردگی بک</td>
+            <td data-label="تاریخ">1403/03/01</td>
+            <td data-label="نمره">21</td>
+            <td data-label="وضعیت" class="waiting">در انتظار بررسی</td>
+            <td data-label="عملیات">
+              <button class="view-result">مشاهده</button>
+            </td>
+          </tr>
+
+          <tr>
+            <td data-label="مراجعه‌کننده">محمد کریمی</td>
+            <td data-label="آزمون">اضطراب</td>
+            <td data-label="تاریخ">1403/02/30</td>
+            <td data-label="نمره">14</td>
+            <td data-label="وضعیت" class="done">بررسی شده</td>
+            <td data-label="عملیات">
+              <button class="view-result">مشاهده</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ================= Result Details ================= -->
+    <section class="result-details">
+
+      <h2>جزئیات آزمون</h2>
+
+      <!-- Meta -->
+      <table class="result-table">
+        <tr>
+          <th>نام مراجعه‌کننده</th>
+          <td>سمیه حسینی</td>
+        </tr>
+        <tr>
+          <th>عنوان آزمون</th>
+          <td>افسردگی بک</td>
+        </tr>
+        <tr>
+          <th>تاریخ انجام</th>
+          <td>1403/03/01</td>
+        </tr>
+        <tr>
+          <th>نمره کل</th>
+          <td>21</td>
+        </tr>
+      </table>
+
+      <!-- Answers -->
+      <div class="answers-section">
+        <h3>پاسخ‌ها</h3>
+
+        <div class="table">
+          <table>
+            <thead>
+              <tr>
+                <th>سوال</th>
+                <th>پاسخ</th>
+                <th>وضعیت</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td data-label="سوال">احساس غمگینی دارید؟</td>
+                <td data-label="پاسخ">زیاد</td>
+                <td data-label="وضعیت" class="answer-wrong">⚠️</td>
+              </tr>
+
+              <tr>
+                <td data-label="سوال">انگیزه انجام کارها</td>
+                <td data-label="پاسخ">کم</td>
+                <td data-label="وضعیت" class="answer-correct">✔️</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Doctor Comment -->
+      <div class="doctor-section">
+        <h3>نظر دکتر</h3>
+
+        <div class="doctor-comment-box">
+          <textarea placeholder="نظر تخصصی خود را وارد کنید..."></textarea>
+
+          <div class="comment-actions">
+            <button>ثبت نظر</button>
+            <button class="secondary">ویرایش</button>
+          </div>
+
+          <span class="comment-date">
+            آخرین ویرایش: 1403/03/02
+          </span>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+</div>
+
+<script src="./js/theme.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>داشبورد ادمین</title>
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" />
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="./css/admin_dashboard.css" />
+  <link rel="stylesheet" href="./css/admin_main.css">
+</head>
+
+<body>
+
+<div class="admin-dashboard container">
+
+  <!-- ================= Sidebar ================= -->
+  <aside class="sidebar-area">
+    <div class="top">
+      <h2>پنل ادمین</h2>
+    </div>
+
+    <div class="user-card">
+      <div class="avatar-wrapper">
+        <span class="material-symbols-sharp">admin_panel_settings</span>
+      </div>
+      <div class="user-info">
+        <strong class="user-name">ادمین سیستم</strong>
+        <span class="user-email">admin@system.com</span>
+      </div>
+    </div>
+
+    <nav class="sidebar">
+      <div class="menu-group">
+        <a class="active" href="./admin_dashboard.html">
+          <span class="material-symbols-sharp">dashboard</span>
+          <h3>داشبورد</h3>
+        </a>
+
+        <a href="./admin_users.html">
+          <span class="material-symbols-sharp">group</span>
+          <h3>کاربران</h3>
+        </a>
+
+        <a href="./admin_clients.html">
+          <span class="material-symbols-sharp">person_heart</span>
+          <h3>مراجعین</h3>
+        </a>
+
+        <a href="./admin_doctors.html">
+          <span class="material-symbols-sharp">medical_services</span>
+          <h3>دکترها</h3>
+        </a>
+
+        <a href="./admin_sessions.html">
+          <span class="material-symbols-sharp">event</span>
+          <h3>جلسات</h3>
+        </a>
+
+        <a href="./admin_tests.html">
+          <span class="material-symbols-sharp">quiz</span>
+          <h3>آزمون‌ها</h3>
+        </a>
+
+        <a href="./admin_payments.html">
+          <span class="material-symbols-sharp">payments</span>
+          <h3>پرداخت‌ها</h3>
+        </a>
+
+        <a href="./admin_reports.html">
+          <span class="material-symbols-sharp">analytics</span>
+          <h3>گزارش‌ها</h3>
+        </a>
+      </div>
+
+      <div class="menu-group secondary">
+        <a href="./admin_settings.html">
+          <span class="material-symbols-sharp">settings</span>
+          <h3>تنظیمات</h3>
+        </a>
+
+        <a class="logout">
+          <span class="material-symbols-sharp">logout</span>
+          <h3>خروج</h3>
+        </a>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- ================= Main ================= -->
+  <main class="content-area">
+
+    <!-- Header -->
+    <header class="dashboard-header">
+
+      <button class="menu-toggle" id="menuToggle">
+        <span class="material-symbols-sharp">menu</span>
+      </button>
+      
+      <div>
+        <h1>داشبورد مدیریت</h1>
+        <p class="page-desc">
+          نمای کلی وضعیت سیستم و فعالیت‌ها
+        </p>
+      </div>
+
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle">
+          <span class="material-symbols-sharp">dark_mode</span>
+        </button>
+
+        <button class="notification-btn">
+          <span class="material-symbols-sharp">notifications</span>
+          <span class="badge">5</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ================= KPI Cards ================= -->
+    <section class="overview">
+
+      <div class="card">
+        <h3>کل کاربران</h3>
+        <h1>1,248</h1>
+        <span class="trend up">+12%</span>
+      </div>
+
+      <div class="card success">
+        <h3>دکترهای فعال</h3>
+        <h1>42</h1>
+        <span class="trend up">+3</span>
+      </div>
+
+      <div class="card danger">
+        <h3>جلسات امروز</h3>
+        <h1>86</h1>
+        <span class="trend down">-5%</span>
+      </div>
+
+      <div class="card warning">
+        <h3>در انتظار تایید</h3>
+        <h1>9</h1>
+        <span class="trend">نیاز به بررسی</span>
+      </div>
+
+    </section>
+
+    <!-- ================= System Alerts ================= -->
+    <section class="system-alerts">
+      <h2>هشدارهای سیستم</h2>
+
+      <div class="alert warning">
+        <span class="material-symbols-sharp">warning</span>
+        <p>۳ دکتر در انتظار تایید مدارک</p>
+        <button>بررسی</button>
+      </div>
+
+      <div class="alert danger">
+        <span class="material-symbols-sharp">error</span>
+        <p>۲ پرداخت ناموفق گزارش شده</p>
+        <button>مشاهده</button>
+      </div>
+    </section>
+
+    <!-- ================= Recent Activity table ================= -->
+    <section class="table">
+      <h2 class ="section-title">فعالیت‌های اخیر</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>کاربر</th>
+            <th>عملیات</th>
+            <th>بخش</th>
+            <th>زمان</th>
+          </tr>
+        </thead>
+      
+        <tbody>
+          <tr>
+            <td data-label="کاربر">دکتر احمدی</td>
+            <td data-label="عملیات">ثبت جلسه</td>
+            <td data-label="بخش">جلسات</td>
+            <td data-label="زمان">10 دقیقه قبل</td>
+          </tr>
+      
+          <tr>
+            <td data-label="کاربر">کاربر جدید</td>
+            <td data-label="عملیات">ثبت‌نام</td>
+            <td data-label="بخش">کاربران</td>
+            <td data-label="زمان">25 دقیقه قبل</td>
+          </tr>
+      
+          <tr>
+            <td data-label="کاربر">ادمین</td>
+            <td data-label="عملیات">ویرایش تنظیمات</td>
+            <td data-label="بخش">سیستم</td>
+            <td data-label="زمان">1 ساعت قبل</td>
+          </tr>
+        </tbody>
+      </table>
+      </section>
+
+  </main>
+  <!-- ================= Right Panel ================= -->
+<aside class="right-panel">
+
+    <!-- ===== Financial Summary ===== -->
+    <section class="finance-summary">
+      <h2>خلاصه مالی</h2>
+  
+      <div class="finance-card income">
+        <span class="material-symbols-sharp">trending_up</span>
+        <div>
+          <h3>درآمد امروز</h3>
+          <strong>12,450,000 تومان</strong>
+        </div>
+      </div>
+  
+      <div class="finance-card success">
+        <span class="material-symbols-sharp">account_balance_wallet</span>
+        <div>
+          <h3>درآمد این ماه</h3>
+          <strong>248,300,000 تومان</strong>
+        </div>
+      </div>
+  
+      <div class="finance-card warning">
+        <span class="material-symbols-sharp">pending_actions</span>
+        <div>
+          <h3>پرداخت‌های معلق</h3>
+          <strong>7 مورد</strong>
+        </div>
+      </div>
+  
+      <div class="finance-card danger">
+        <span class="material-symbols-sharp">cancel</span>
+        <div>
+          <h3>پرداخت ناموفق</h3>
+          <strong>2 مورد</strong>
+        </div>
+      </div>
+    </section>
+  
+    <!-- ===== Quick Finance Actions ===== -->
+    <section class="finance-actions">
+      <button class="primary-btn full">گزارش مالی کامل</button>
+      <button class="outline-btn full">تسویه حساب‌ها</button>
+    </section>
+  
+  </aside>
+  
+</div>
+
+<script src="./js/theme.js"></script>
+</body>
+</html>

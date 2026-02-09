@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>مدیریت مراجعین</title>
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" />
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="./css/admin_clients.css" />
+  <link rel="stylesheet" href="./css/admin_main.css">
+</head>
+
+<body>
+
+<div class="admin-clients container">
+
+  <!-- ================= Sidebar ================= -->
+  <aside class="sidebar-area">
+    <div class="top">
+      <h2>پنل ادمین</h2>
+    </div>
+
+    <div class="user-card">
+      <div class="avatar-wrapper">
+        <span class="material-symbols-sharp">admin_panel_settings</span>
+      </div>
+      <div class="user-info">
+        <strong>ادمین سیستم</strong>
+        <small>admin@system.com</small>
+      </div>
+    </div>
+
+    <nav class="sidebar">
+      <div class="menu-group">
+        <a href="./admin_dashboard.html">
+          <span class="material-symbols-sharp">dashboard</span>
+          <h3>داشبورد</h3>
+        </a>
+
+        <a href="./admin_users.html">
+          <span class="material-symbols-sharp">group</span>
+          <h3>کاربران</h3>
+        </a>
+
+        <a class="active" href="./admin_clients.html">
+          <span class="material-symbols-sharp">person_heart</span>
+          <h3>مراجعین</h3>
+        </a>
+
+        <a href="./admin_doctors.html">
+          <span class="material-symbols-sharp">medical_services</span>
+          <h3>دکترها</h3>
+        </a>
+
+        <a href="./admin_sessions.html">
+          <span class="material-symbols-sharp">event</span>
+          <h3>جلسات</h3>
+        </a>
+
+        <a href="./admin_tests.html">
+          <span class="material-symbols-sharp">quiz</span>
+          <h3>آزمون‌ها</h3>
+        </a>
+
+        <a href="./admin_payments.html">
+          <span class="material-symbols-sharp">payments</span>
+          <h3>پرداخت‌ها</h3>
+        </a>
+        
+        <a href="./admin_reports.html">
+          <span class="material-symbols-sharp">analytics</span>
+          <h3>گزارش‌ها</h3>
+        </a>
+      </div>
+
+      <div class="menu-group secondary">
+        <a href="./admin_settings.html">
+          <span class="material-symbols-sharp">settings</span>
+          <h3>تنظیمات</h3>
+        </a>
+
+        <a class="logout">
+          <span class="material-symbols-sharp">logout</span>
+          <h3>خروج</h3>
+        </a>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- ================= Main ================= -->
+  <main class="content-area">
+
+    <!-- ===== Header ===== -->
+    <header class="dashboard-header">
+         
+      <button class="menu-toggle" id="menuToggle">
+        <span class="material-symbols-sharp">menu</span>
+      </button>
+      
+      <div>
+        <h1>مدیریت مراجعین</h1>
+        <p class="page-desc">
+          بررسی وضعیت درمان، جلسات، آزمون‌ها و پرداخت‌های مراجعین
+        </p>
+      </div>
+
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle">
+          <span class="material-symbols-sharp">dark_mode</span>
+        </button>
+
+        <button class="primary-btn" title="افزودن مراجع">
+          <span class="material-symbols-sharp">person_add</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ===== Overview ===== -->
+    <section class="overview">
+
+      <div class="card">
+        <h3>کل مراجعین</h3>
+        <h1>684</h1>
+      </div>
+
+      <div class="card success">
+        <h3>در حال درمان</h3>
+        <h1>412</h1>
+      </div>
+
+      <div class="card warning">
+        <h3>نیازمند پیگیری</h3>
+        <h1>38</h1>
+      </div>
+
+      <div class="card danger">
+        <h3>غیرفعال</h3>
+        <h1>64</h1>
+      </div>
+
+    </section>
+
+    <!-- ===== Toolbar ===== -->
+    <section class="toolbar-wrapper">
+      <div class="toolbar">
+
+        <div class="search-box">
+          <span class="material-symbols-sharp">search</span>
+          <input type="text" placeholder="نام، کد ملی، موبایل">
+        </div>
+
+        <select>
+          <option>وضعیت درمان</option>
+          <option>فعال</option>
+          <option>پایان‌یافته</option>
+          <option>نیازمند پیگیری</option>
+        </select>
+
+        <select>
+          <option>وضعیت پرداخت</option>
+          <option>تسویه شده</option>
+          <option>بدهکار</option>
+        </select>
+
+      </div>
+    </section>
+
+    <!-- ===== Clients Table ===== -->
+    <section class="table">
+
+      <h2 class="section-title">لیست مراجعین</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>مراجع</th>
+            <th>وضعیت درمان</th>
+            <th>جلسات</th>
+            <th>آزمون‌ها</th>
+            <th>پرداخت</th>
+            <th>دکتر</th>
+            <th>عملیات</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td data-label="مراجع">
+              <div class="cell">
+                <span class="avatar">AR</span>
+                <div>
+                  <strong>علی رضایی</strong>
+                  <small>کد: 10234</small>
+                </div>
+              </div>
+            </td>
+
+            <td data-label="وضعیت درمان"><span class="status-badge active">در حال درمان</span></td>
+            <td data-label="جلسات">12 جلسه</td>
+            <td data-label="آزمون‌ها">3 آزمون</td>
+            <td data-label="پرداخت"><span class="status-badge success">تسویه</span></td>
+            <td data-label="دکتر">دکتر احمدی</td>
+
+            <td class="actions">
+              <button title="پرونده">
+                <span class="material-symbols-sharp">folder</span>
+              </button>
+              <button title="ارجاع">
+                <span class="material-symbols-sharp">sync_alt</span>
+              </button>
+              <button class="danger" title="غیرفعال‌سازی">
+                <span class="material-symbols-sharp">block</span>
+              </button>
+            </td>
+          </tr>
+
+          <tr>
+            <td data-label="مراجع">
+              <div class="cell">
+                <span class="avatar">MN</span>
+                <div>
+                  <strong>مینا نادری</strong>
+                  <small>کد: 11802</small>
+                </div>
+              </div>
+            </td>
+
+            <td data-label="وضعیت درمان"><span class="status-badge warning">نیازمند پیگیری</span></td>
+            <td data-label="جلسات">5 جلسه</td>
+            <td data-label="آزمون‌ها">1 آزمون</td>
+            <td data-label="پرداخت"><span class="status-badge danger">بدهکار</span></td>
+            <td data-label="دکتر">—</td>
+
+            <td class="actions">
+              <button title="پرونده">
+                <span class="material-symbols-sharp">folder</span>
+              </button>
+              <button title="ارجاع">
+                <span class="material-symbols-sharp">sync_alt</span>
+              </button>
+              <button class="danger" title="غیرفعال‌سازی">
+                <span class="material-symbols-sharp">block</span>
+              </button>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+    </section>
+
+  </main>
+
+  <aside class="right-panel clients-advanced-panel">
+
+    <!-- ===== Treatment Health ===== -->
+    <section class="panel-box treatment-health">
+  
+      <header class="panel-title">
+        <span class="material-symbols-sharp">monitor_heart</span>
+        <h3>وضعیت کلی درمان</h3>
+      </header>
+  
+      <div class="health-bars">
+        <div class="health-item success">
+          <span>درمان پایدار</span>
+          <div class="bar">
+            <div style="width: 62%"></div>
+          </div>
+          <small>62%</small>
+        </div>
+  
+        <div class="health-item warning">
+          <span>نیازمند پیگیری</span>
+          <div class="bar">
+            <div style="width: 23%"></div>
+          </div>
+          <small>23%</small>
+        </div>
+  
+        <div class="health-item danger">
+          <span>در معرض ریزش</span>
+          <div class="bar">
+            <div style="width: 15%"></div>
+          </div>
+          <small>15%</small>
+        </div>
+      </div>
+  
+    </section>
+  
+    <!-- ===== High Risk Clients ===== -->
+    <section class="panel-box risk-clients">
+  
+      <header class="panel-title">
+        <span class="material-symbols-sharp">crisis_alert</span>
+        <h3>هشدارهای مهم</h3>
+      </header>
+  
+      <ul class="risk-list">
+        <li>
+          <span class="dot danger"></span>
+          <div>
+            <strong>۷ مراجع بدون جلسه بیش از ۳۰ روز</strong>
+            <small>احتمال ریزش بالا</small>
+          </div>
+        </li>
+  
+        <li>
+          <span class="dot warning"></span>
+          <div>
+            <strong>۱۲ مراجع با پرداخت معلق</strong>
+            <small>نیازمند پیگیری مالی</small>
+          </div>
+        </li>
+  
+        <li>
+          <span class="dot warning"></span>
+          <div>
+            <strong>۵ مراجع بدون دکتر فعال</strong>
+            <small>ارجاع فوری نیاز است</small>
+          </div>
+        </li>
+      </ul>
+  
+    </section>
+  
+    <!-- ===== Doctor Load ===== -->
+    <section class="panel-box doctor-load">
+  
+      <header class="panel-title">
+        <span class="material-symbols-sharp">psychology</span>
+        <h3>فشار روی دکترها</h3>
+      </header>
+  
+      <div class="doctor-load-list">
+        <div class="doctor-load-item">
+          <span>دکتر احمدی</span>
+          <small class="danger">ظرفیت پر</small>
+        </div>
+  
+        <div class="doctor-load-item">
+          <span>دکتر کریمی</span>
+          <small class="success">ظرفیت آزاد</small>
+        </div>
+  
+        <div class="doctor-load-item">
+          <span>دکتر نادری</span>
+          <small class="warning">لب مرز</small>
+        </div>
+      </div>
+  
+    </section>
+  
+    <!-- ===== Admin Quick Control ===== -->
+    <section class="panel-box quick-control">
+  
+      <header class="panel-title">
+        <span class="material-symbols-sharp">bolt</span>
+        <h3>کنترل سریع</h3>
+      </header>
+  
+      <div class="control-actions">
+        <button class="quick-btn warning">
+          <span class="material-symbols-sharp">sync_alt</span>
+          ارجاع گروهی
+        </button>
+  
+        <button class="quick-btn danger">
+          <span class="material-symbols-sharp">pause_circle</span>
+          تعلیق مراجع
+        </button>
+  
+        <button class="quick-btn success">
+          <span class="material-symbols-sharp">task_alt</span>
+          پیگیری درمان
+        </button>
+      </div>
+  
+    </section>
+  
+  </aside>
+  
+</div>
+
+<script src="./js/theme.js"></script>
+</body>
+</html>

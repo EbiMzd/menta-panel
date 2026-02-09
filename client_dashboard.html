@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>داشبورد مراجعه‌کننده</title>
+
+  <!-- Icons -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" />
+
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="./css/admin_main.css">
+  <link rel="stylesheet" href="./css/client_dashboard.css">
+</head>
+<body>
+
+<div class="client-dashboard container">
+
+  <!-- ================= Sidebar ================= -->
+  <aside class="sidebar-area">
+    <div class="top">
+      <h2>پنل مراجعه‌کننده</h2>
+    </div>
+    
+    <div class="user-card">
+        <div class="avatar-wrapper">
+          <!-- اگر عکس داشت -->
+          <!-- <img src="user-avatar.jpg" alt="عکس پروفایل مریم احمدی"> -->
+      
+          <!-- اگر عکس نداشت -->
+          <span class="material-symbols-sharp">person</span>
+        </div>
+      
+        <div class="user-info">
+          <strong class="user-name">مریم احمدی</strong>
+          <span class="user-email">maryam@gmail.com</span>
+        </div>
+    </div>
+      
+    
+    <nav class="sidebar">
+        <div class="menu-group">
+            <a class="active" href="./client_dashboard.html">
+                <span class="material-symbols-sharp">dashboard</span>
+                <h3>داشبورد</h3>
+            </a>
+
+            <a href="./client_tests.html">
+                <span class="material-symbols-sharp">quiz</span>
+                <h3>آزمون‌های من</h3>
+            </a>
+
+            <a href="./client_results.html">
+                <span class="material-symbols-sharp">assignment</span>
+                <h3>نتایج</h3>
+            </a>
+        </div>
+        <div class="menu-group secondary">
+            <a href="./client_payments.html">
+                <span class="material-symbols-sharp">payments</span>
+                <h3>پرداخت‌ها</h3>
+            </a>
+
+            <a href="./client_profile.html">
+                <span class="material-symbols-sharp">person</span>
+                <h3>پروفایل</h3>
+            </a>
+
+            <a class="logout">
+                <span class="material-symbols-sharp">logout</span>
+                <h3>خروج</h3>
+            </a>
+        </div>
+    </nav>
+  </aside>
+
+  <!-- ================= Main ================= -->
+  <main class="content-area">
+    <header class="dashboard-header">
+      
+      <button class="menu-toggle" id="menuToggle">
+        <span class="material-symbols-sharp">menu</span>
+      </button>
+      
+      <div>
+        <h1>داشبورد</h1>
+      </div>
+
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="تغییر تم">
+            <span class="material-symbols-sharp">dark_mode</span>
+        </button>  
+      </div> 
+
+    </header>
+    <!-- Overview Cards -->
+    <section class="overview">
+
+      <div class="card">
+        <h3>کل آزمون‌ها</h3>
+        <h1>12</h1>
+      </div>
+
+      <div class="card warning">
+        <h3>در انتظار نتیجه</h3>
+        <h1>3</h1>
+      </div>
+
+      <div class="card danger">
+        <h3>پرداخت نشده</h3>
+        <h1>1</h1>
+      </div>
+
+      <div class="card success">
+        <h3>درمانگر</h3>
+        <p>دکتر احمدی</p>
+      </div>
+
+    </section>
+
+    <!-- Tests Table -->
+    <section class="table">
+      <h2>آخرین آزمون‌ها</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>نام آزمون</th>
+            <th>نوع</th>
+            <th>تاریخ</th>
+            <th>قیمت</th>
+            <th>پرداخت</th>
+            <th>نتیجه</th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr data-test-id="101">
+            <td data-label="نام آزمون">آزمون اضطراب</td>
+            <td data-label="نوع">تستی</td>
+            <td data-label="تاریخ">1403/02/20 - 14:30</td>
+            <td data-label="قیمت">120,000</td>
+            <td data-label="پرداخت" class="paid">پرداخت شده</td>
+            <td data-label="نتیجه" class="waiting">در انتظار</td>
+            <td><button>مشاهده</button></td>
+          </tr>
+
+          <tr data-test-id="102">
+            <td data-label="نام آزمون">آزمون شخصیت</td>
+            <td data-label="نوع">تشریحی</td>
+            <td data-label="تاریخ">1403/02/18 - 18:00</td>
+            <td data-label="قیمت">200,000</td>
+            <td data-label="پرداخت" class="unpaid">پرداخت نشده</td>
+            <td data-label="نتیجه" class="done">آماده</td>
+            <td><button>مشاهده</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <!-- ================= Right Panel ================= -->
+  <div class="right-panel">
+
+    <section class="doctor">
+      <h2>درمانگر شما</h2>
+      <p><strong>دکتر احمدی</strong></p>
+      <span class="badge">اختصاصی</span>
+    </section>
+
+    <section class="notifications">
+      <h2>اعلان‌ها</h2>
+
+      <div class="notification">
+        نتیجه آزمون شخصیت آماده شد
+      </div>
+
+      <div class="notification">
+        نظر درمانگر ثبت شد
+      </div>
+    </section>
+
+    <section class="profile-completion">
+        <h2>تکمیل پروفایل</h2>
+      
+        <div class="progress-circle" data-progress="60">
+          <svg width="120" height="120">
+            <circle class="bg" cx="60" cy="60" r="52" />
+            <circle class="progress" cx="60" cy="60" r="52" />
+          </svg>
+      
+          <div class="progress-text">
+            <strong>60%</strong>
+            <span>تکمیل شده</span>
+          </div>
+        </div>
+      
+        <button class="cta-complete">تکمیل پروفایل</button>
+    </section>
+      
+      
+  </div>
+
+</div>
+</body>
+<script src="./js/theme.js"></script>
+<script src="./js/client_dashboard.js"></script>
+
+</html>

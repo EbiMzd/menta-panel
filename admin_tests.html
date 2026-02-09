@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>مدیریت آزمون‌ها</title>
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" />
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="./css/admin_main.css" />
+  <link rel="stylesheet" href="./css/admin_tests.css" />
+</head>
+
+<body>
+
+<div class="admin-tests container">
+
+  <!-- ================= Sidebar ================= -->
+  <aside class="sidebar-area">
+    <div class="top">
+      <h2>پنل ادمین</h2>
+    </div>
+
+    <div class="user-card">
+      <div class="avatar-wrapper">
+        <span class="material-symbols-sharp">admin_panel_settings</span>
+      </div>
+      <div class="user-info">
+        <strong>ادمین سیستم</strong>
+        <small>admin@system.com</small>
+      </div>
+    </div>
+
+    <nav class="sidebar">
+      <div class="menu-group">
+        <a href="./admin_dashboard.html">
+          <span class="material-symbols-sharp">dashboard</span>
+          <h3>داشبورد</h3>
+        </a>
+
+        <a href="./admin_users.html">
+          <span class="material-symbols-sharp">group</span>
+          <h3>کاربران</h3>
+        </a>
+
+        <a href="./admin_clients.html">
+          <span class="material-symbols-sharp">person_heart</span>
+          <h3>مراجعین</h3>
+        </a>
+
+        <a href="./admin_doctors.html">
+          <span class="material-symbols-sharp">medical_services</span>
+          <h3>دکترها</h3>
+        </a>
+
+        <a href="./admin_sessions.html">
+          <span class="material-symbols-sharp">event</span>
+          <h3>جلسات</h3>
+        </a>
+
+        <a class="active" href="./admin_tests.html">
+          <span class="material-symbols-sharp">quiz</span>
+          <h3>آزمون‌ها</h3>
+        </a>
+
+        <a href="./admin_payments.html">
+          <span class="material-symbols-sharp">payments</span>
+          <h3>پرداخت‌ها</h3>
+        </a>
+
+        <a href="./admin_reports.html">
+          <span class="material-symbols-sharp">analytics</span>
+          <h3>گزارش‌ها</h3>
+        </a>
+      </div>
+
+      <div class="menu-group secondary">
+        <a href="./admin_settings.html">
+          <span class="material-symbols-sharp">settings</span>
+          <h3>تنظیمات</h3>
+        </a>
+
+        <a class="logout">
+          <span class="material-symbols-sharp">logout</span>
+          <h3>خروج</h3>
+        </a>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- ================= Main ================= -->
+  <main class="content-area">
+
+    <!-- ================= Header ================= -->
+    <header class="dashboard-header">
+
+      <button class="menu-toggle" id="menuToggle">
+        <span class="material-symbols-sharp">menu</span>
+      </button>
+      
+        <div class="title-box">
+          <h1>مدیریت آزمون‌ها و ارزیابی‌ها</h1>
+          <p class="page-desc">
+            مدیریت بانک آزمون‌ها، سوالات، نتایج و تحلیل عملکرد مراجعین
+          </p>
+        </div>
+
+        <div class="header-actions">
+          <button id="theme-toggle" class="theme-toggle">
+            <span class="material-symbols-sharp">dark_mode</span>
+          </button>
+          <button class="primary-btn" title="افزودن آزمون">
+            <span class="material-symbols-sharp">add</span>
+          </button>
+        </div>
+
+
+    </header>
+
+    <!-- ================= Overview ================= -->
+    <section class="overview tests-overview">
+
+      <div class="card">
+        <span class="material-symbols-sharp">quiz</span>
+        <div>
+          <h3>کل آزمون‌ها</h3>
+          <h1>38</h1>
+        </div>
+      </div>
+
+      <div class="card success">
+        <span class="material-symbols-sharp">check_circle</span>
+        <div>
+          <h3>فعال</h3>
+          <h1>26</h1>
+        </div>
+      </div>
+
+      <div class="card warning">
+        <span class="material-symbols-sharp">pending</span>
+        <div>
+          <h3>در انتظار بررسی</h3>
+          <h1>7</h1>
+        </div>
+      </div>
+
+      <div class="card danger">
+        <span class="material-symbols-sharp">block</span>
+        <div>
+          <h3>غیرفعال</h3>
+          <h1>5</h1>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ================= Toolbar ================= -->
+    <section class="toolbar-wrapper">
+      <div class="toolbar">
+
+        <div class="search-box">
+          <span class="material-symbols-sharp">search</span>
+          <input type="text" placeholder="جستجو نام آزمون">
+        </div>
+
+        <select>
+          <option>وضعیت آزمون</option>
+          <option>فعال</option>
+          <option>غیرفعال</option>
+          <option>در انتظار بررسی</option>
+        </select>
+
+        <select>
+          <option>نوع آزمون</option>
+          <option>تشخیصی</option>
+          <option>ارزیابی درمان</option>
+          <option>غربالگری</option>
+        </select>
+
+      </div>
+    </section>
+
+    <!-- ================= Tests Bank Table ================= -->
+    <section class="table tests-table">
+
+      <h2 class="section-title">بانک آزمون‌ها</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>آزمون</th>
+            <th>نوع</th>
+            <th>تعداد سوال</th>
+            <th>وضعیت</th>
+            <th>آخرین بروزرسانی</th>
+            <th>عملیات</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td data-label="آزمون">
+              <div class="cell">
+                <span class="avatar">BDI</span>
+                <span>افسردگی بک</span>
+              </div>
+            </td>
+            <td data-label="نوع">تشخیصی</td>
+            <td data-label="تعداد سوال">21</td>
+            <td data-label="وضعیت">
+              <span class="status-badge active">فعال</span>
+            </td>
+            <td data-label="آخرین بروزرسانی">1402/11/01</td>
+            <td class="actions">
+              <button title="مدیریت سوالات">
+                <span class="material-symbols-sharp">quiz</span>
+              </button>
+              <button title="نتایج">
+                <span class="material-symbols-sharp">analytics</span>
+              </button>
+              <button title="غیرفعال‌سازی" class="danger">
+                <span class="material-symbols-sharp">block</span>
+              </button>
+            </td>
+          </tr>
+
+          <tr>
+            <td data-label="آزمون">
+              <div class="cell">
+                <span class="avatar">GAD</span>
+                <span>اضطراب GAD-7</span>
+              </div>
+            </td>
+            <td data-label="نوع">غربالگری</td>
+            <td data-label="تعداد سوال">7</td>
+            <td data-label="وضعیت">
+              <span class="status-badge warning">در انتظار</span>
+            </td>
+            <td data-label="آخرین بروزرسانی">1402/10/18</td>
+            <td class="actions">
+              <button title="بررسی">
+                <span class="material-symbols-sharp">task</span>
+              </button>
+              <button title="تایید" class="success">
+                <span class="material-symbols-sharp">check_circle</span>
+              </button>
+              <button title="رد" class="danger">
+                <span class="material-symbols-sharp">cancel</span>
+              </button>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+    </section>
+
+    <!-- ================= Test Results ================= -->
+    <section class="table test-results">
+
+      <h2 class="section-title">نتایج اخیر آزمون‌ها</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>مراجع</th>
+            <th>آزمون</th>
+            <th>نمره</th>
+            <th>وضعیت بررسی</th>
+            <th>تاریخ</th>
+            <th>جزئیات</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td data-label="مراجع">علی رضایی</td>
+            <td data-label="آزمون">افسردگی بک</td>
+            <td data-label="نمره">32</td>
+            <td data-label="وضعیت بررسی" class="status active">بررسی شده</td>
+            <td data-label="تاریخ">1402/11/04</td>
+            <td data-label="جزئیات">
+              <button class="link-btn">مشاهده تحلیل</button>
+            </td>
+          </tr>
+
+          <tr>
+            <td data-label="مراجع">مریم احمدی</td>
+            <td data-label="آزمون">اضطراب GAD-7</td>
+            <td data-label="نمره">—</td>
+            <td data-label="وضعیت بررسی" class="status blocked">در انتظار</td>
+            <td data-label="تاریخ">1402/11/02</td>
+            <td data-label="جزئیات">—</td>
+          </tr>
+
+        </tbody>
+      </table>
+
+    </section>
+
+  </main>
+
+  <!-- ================= Right Panel ================= -->
+  <aside class="right-panel tests-panel">
+
+    <section class="panel-box">
+      <h3>تحلیل سریع</h3>
+      <ul>
+        <li>میانگین نمره: <strong>27.4</strong></li>
+        <li>بیشترین استفاده: <strong>افسردگی بک</strong></li>
+        <li>نیازمند بررسی: <strong>9 نتیجه</strong></li>
+      </ul>
+    </section>
+
+    <section class="panel-box">
+      <h3>هشدارها</h3>
+      <p>۳ آزمون بدون بررسی بیش از ۷ روز</p>
+      <p>۲ آزمون غیرفعال با نتیجه ثبت شده</p>
+    </section>
+
+    <section class="panel-box">
+      <h3>کنترل سریع</h3>
+      <button class="primary-btn full">گزارش تحلیلی</button>
+      <button class="outline-btn full">مدیریت سوالات</button>
+    </section>
+
+  </aside>
+
+</div>
+
+<script src="./js/theme.js"></script>
+</body>
+</html>

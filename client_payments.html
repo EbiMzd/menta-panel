@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>پرداخت‌ها</title>
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" />
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="./css/client_payments.css">
+  <link rel="stylesheet" href="./css/admin_main.css">
+</head>
+
+<body>
+
+<div class="client-payments container">
+
+  <!-- ================= Sidebar ================= -->
+  <aside  class="sidebar-area">
+    <div class="top">
+      <h2>پنل مراجعه‌کننده</h2>
+    </div>
+
+    <div class="user-card">
+      <div class="avatar-wrapper">
+        <span class="material-symbols-sharp">person</span>
+      </div>
+      <div class="user-info">
+        <strong class="user-name">مریم احمدی</strong>
+        <span class="user-email">maryam@gmail.com</span>
+      </div>
+    </div>
+
+    <nav class="sidebar">
+        <div class="menu-group">
+            <a href="./client_dashboard.html">
+                <span class="material-symbols-sharp">dashboard</span>
+                <h3>داشبورد</h3>
+            </a>
+
+            <a href="./client_tests.html">
+                <span class="material-symbols-sharp">quiz</span>
+                <h3>آزمون‌های من</h3>
+            </a>
+
+            <a href="./client_results.html">
+                <span class="material-symbols-sharp">assignment</span>
+                <h3>نتایج</h3>
+            </a>
+        </div>
+
+        <div class="menu-group secondary">
+            
+            <a class="active" href="./client_payments.html">
+                <span class="material-symbols-sharp">payments</span>
+                <h3>پرداخت‌ها</h3>
+            </a>
+        
+            <a href="./client_profile.html">
+                <span class="material-symbols-sharp">person</span>
+                <h3>پروفایل</h3>
+            </a>
+
+            <a class="logout">
+                <span class="material-symbols-sharp">logout</span>
+                <h3>خروج</h3>
+            </a>
+        </div>
+    </nav>
+  </aside>
+
+  <!-- ================= Main ================= -->
+  <main class="content-area">
+
+    <!-- Header -->
+    <header class="dashboard-header">
+       
+      <button class="menu-toggle" id="menuToggle">
+        <span class="material-symbols-sharp">menu</span>
+      </button>
+     
+      <div>
+        <h1>پرداخت‌ها</h1>
+        <p class="page-desc">
+          مدیریت پرداخت‌ها، اقساط و درخواست بیمه تکمیلی
+        </p>
+      </div>
+
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle">
+          <span class="material-symbols-sharp">dark_mode</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ================= Financial Overview ================= -->
+    <section class="overview">
+
+      <div class="card success">
+        <h3>پرداخت‌شده</h3>
+        <h1>520,000</h1>
+        <p>تومان</p>
+      </div>
+
+      <div class="card warning">
+        <h3>در انتظار پرداخت</h3>
+        <h1>180,000</h1>
+        <p>تومان</p>
+      </div>
+
+      <div class="card danger">
+        <h3>پرداخت معوق</h3>
+        <h1>1</h1>
+        <p>مورد</p>
+      </div>
+
+      <div class="card">
+        <h3>وضعیت بیمه</h3>
+        <p>در انتظار بررسی</p>
+      </div>
+
+    </section>
+
+    <!-- ================= Payments Table ================= -->
+    <section class="table">
+      <h2>لیست پرداخت‌ها</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>عنوان</th>
+            <th>مبلغ</th>
+            <th>تاریخ</th>
+            <th>روش پرداخت</th>
+            <th>وضعیت</th>
+            <th>عملیات</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td data-label="عنوان">آزمون اضطراب</td>
+            <td data-label="مبلغ">120,000</td>
+            <td data-label="تاریخ">1403/02/20</td>
+            <td data-label="روش پرداخت">آنلاین</td>
+            <td data-label="وضعیت" class="paid">پرداخت شده</td>
+            <td data-label="عملیات">
+              <button>مشاهده فاکتور</button>
+            </td>
+          </tr>
+
+          <tr>
+            <td data-label="عنوان">جلسه مشاوره</td>
+            <td data-label="مبلغ">300,000</td>
+            <td data-label="تاریخ">1403/02/25</td>
+            <td data-label="روش پرداخت">قسطی</td>
+            <td data-label="وضعیت" class="waiting">در انتظار</td>
+            <td data-label="عملیات">
+              <button>پرداخت</button>
+            </td>
+          </tr>
+
+          <tr>
+            <td data-label="عنوان">آزمون شخصیت</td>
+            <td data-label="مبلغ">200,000</td>
+            <td data-label="تاریخ">—</td>
+            <td data-label="روش پرداخت">—</td>
+            <td data-label="عملیات" class="danger">پرداخت نشده</td>
+            <td>
+              <button>پرداخت</button>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ================= Installments ================= -->
+    <section class="installments">
+      <h2>پرداخت‌های قسطی</h2>
+
+      <div class="installment-card">
+        <h3>جلسه مشاوره (۳ قسط)</h3>
+
+        <ul class="installment-info">
+          <li>مبلغ کل: 300,000 تومان</li>
+          <li>پرداخت‌شده: 1 از 3</li>
+          <li>قسط بعدی: 100,000 تومان</li>
+          <li>تاریخ سررسید: 1403/03/05</li>
+        </ul>
+
+        <button>پرداخت قسط بعدی</button>
+      </div>
+    </section>
+
+    <!-- ================= Insurance Section ================= -->
+    <section class="insurance">
+      <h2>بیمه تکمیلی</h2>
+
+      <!-- وضعیت ثبت شده -->
+      <div class="insurance-status waiting">
+        <p>
+          درخواست بیمه شما ثبت شده و در انتظار بررسی است.
+        </p>
+        <span>نام بیمه: تأمین اجتماعی</span>
+      </div>
+
+      <!-- اگر بیمه نداشت -->
+      <!--
+      <div class="insurance-request">
+        <p>بیمه تکمیلی ثبت نشده است.</p>
+        <button>ثبت درخواست بیمه</button>
+      </div>
+      -->
+    </section>
+
+    <!-- ================= Invoices ================= -->
+    <section class="table invoices">
+      <h2>فاکتورها و رسیدها</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>شماره فاکتور</th>
+            <th>مبلغ</th>
+            <th>تاریخ</th>
+            <th>دانلود</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td data-label="شماره فاکتور">#INV-1023</td>
+            <td data-label="مبلغ">120,000</td>
+            <td data-label="تاریخ">1403/02/20</td>
+            <td data-label="دانلود">
+              <button>PDF</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+</div>
+
+<script src="./js/theme.js"></script>
+<script src="./js/client_payments.js"></script>
+
+</body>
+</html>

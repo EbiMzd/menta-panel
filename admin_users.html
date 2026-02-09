@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>مدیریت کاربران</title>
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" />
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="./css/admin_users.css" />
+  <link rel="stylesheet" href="./css/admin_main.css">
+</head>
+
+<body>
+
+<div class="admin-users container">
+
+  <!-- ================= Sidebar ================= -->
+  <aside class="sidebar-area">
+    <div class="top">
+      <h2>پنل ادمین</h2>
+    </div>
+
+    <div class="user-card">
+      <div class="avatar-wrapper">
+        <span class="material-symbols-sharp">admin_panel_settings</span>
+      </div>
+      <div class="user-info">
+        <strong class="user-name">ادمین سیستم</strong>
+        <span class="user-email">admin@system.com</span>
+      </div>
+    </div>
+
+    <nav class="sidebar">
+      <div class="menu-group">
+        <a href="./admin_dashboard.html">
+          <span class="material-symbols-sharp">dashboard</span>
+          <h3>داشبورد</h3>
+        </a>
+
+        <a class="active" href="./admin_users.html">
+          <span class="material-symbols-sharp">group</span>
+          <h3>کاربران</h3>
+        </a>
+
+        <a href="./admin_clients.html">
+          <span class="material-symbols-sharp">person_heart</span>
+          <h3>مراجعین</h3>
+        </a>
+
+        <a href="./admin_doctors.html">
+          <span class="material-symbols-sharp">medical_services</span>
+          <h3>دکترها</h3>
+        </a>
+
+        <a href="./admin_sessions.html">
+          <span class="material-symbols-sharp">event</span>
+          <h3>جلسات</h3>
+        </a>
+
+        <a href="./admin_tests.html">
+          <span class="material-symbols-sharp">quiz</span>
+          <h3>آزمون‌ها</h3>
+        </a>
+
+        <a href="./admin_payments.html">
+          <span class="material-symbols-sharp">payments</span>
+          <h3>پرداخت‌ها</h3>
+        </a>
+
+        <a href="./admin_reports.html">
+          <span class="material-symbols-sharp">analytics</span>
+          <h3>گزارش‌ها</h3>
+        </a>
+      </div>
+
+      <div class="menu-group secondary">
+        <a href="./admin_settings.html">
+          <span class="material-symbols-sharp">settings</span>
+          <h3>تنظیمات</h3>
+        </a>
+
+        <a class="logout">
+          <span class="material-symbols-sharp">logout</span>
+          <h3>خروج</h3>
+        </a>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- ================= Main ================= -->
+  <main class="content-area">
+
+    <!-- ================= Header ================= -->
+    <header class="dashboard-header">
+      
+      <button class="menu-toggle" id="menuToggle">
+        <span class="material-symbols-sharp">menu</span>
+      </button>
+      
+      <div>
+        <h1>مدیریت کاربران</h1>
+        <p class="page-desc">
+          کنترل کامل کاربران، وضعیت حساب‌ها، سطح دسترسی و فعالیت‌ها
+        </p>
+      </div>
+    
+      <div class="header-actions">
+        
+        <button id="theme-toggle" class="theme-toggle">
+          <span class="material-symbols-sharp">dark_mode</span>
+        </button>
+    
+        <button class="primary-btn" title="افزودن کاربر">
+          <span class="material-symbols-sharp">person_add</span>
+        </button>
+      </div>
+    </header>
+    
+    <section class="overview users-overview">
+
+      <div class="card">
+        <h3>کل کاربران</h3>
+        <h1>1,248</h1>
+        <span class="trend up">+12%</span>
+      </div>
+    
+      <div class="card success">
+        <h3>کاربران فعال</h3>
+        <h1>1,120</h1>
+        <span class="trend up">+5%</span>
+      </div>
+    
+      <div class="card danger">
+        <h3>کاربران مسدود</h3>
+        <h1>128</h1>
+        <span class="trend down">+3</span>
+      </div>
+    
+      <div class="card warning">
+        <h3>در انتظار تایید</h3>
+        <h1>9</h1>
+        <span class="trend">نیاز به بررسی</span>
+      </div>
+    
+    </section>
+
+    <section class="toolbar-wrapper">
+      <div class="toolbar">
+    
+        <div class="search-box">
+          <span class="material-symbols-sharp">search</span>
+          <input type="text" placeholder="جستجو نام، ایمیل یا موبایل">
+        </div>
+    
+        <select>
+          <option>وضعیت حساب</option>
+          <option>فعال</option>
+          <option>مسدود</option>
+        </select>
+    
+        <select>
+          <option>نقش</option>
+          <option>کاربر</option>
+          <option>دکتر</option>
+          <option>ادمین</option>
+        </select>
+    
+      </div>
+    </section>
+        
+    <!-- ================= Users Table ================= -->
+    <section class="table">
+
+      <table>
+        <thead>
+          <tr>
+            <th>کاربر</th>
+            <th>ایمیل</th>
+            <th>نقش</th>
+            <th>وضعیت</th>
+            <th>آخرین ورود</th>
+            <th>تاریخ عضویت</th>
+            <th>عملیات</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td data-label = "کاربر">
+              <div class="cell">
+                <span class="avatar">AR</span>
+                <span>علی رضایی</span>
+              </div>
+            </td>
+            <td data-label = "ایمیل">ali@mail.com</td>
+            <td data-label = "نقش">کاربر</td>
+            <td data-label = "وضعیت" class="status active">فعال</td>
+            <td data-label = "آخرین ورود">1402/11/03</td>
+            <td data-label = "تاریخ عضویت">1402/10/12</td>
+            <td class="actions">
+              <button title="مشاهده">
+                <span class="material-symbols-sharp">visibility</span>
+              </button>
+              <button title="ویرایش">
+                <span class="material-symbols-sharp">edit</span>
+              </button>
+              <button class="danger" title="مسدودسازی">
+                <span class="material-symbols-sharp">block</span>
+              </button>
+            </td>
+          </tr>
+
+          <tr>
+            <td data-label = "کاربر">
+              <div class="cell">
+                <span class="avatar">MA</span>
+                <span>مریم احمدی</span>
+              </div>
+            </td>
+            <td data-label = "ایمیل">maryam@mail.com</td>
+            <td data-label = "نقش">کاربر</td>
+            <td data-label = "وضعیت" class="status blocked">مسدود</td>
+            <td data-label = "آخرین ورود">—</td>
+            <td data-label = "تاریخ عضویت">1402/09/28</td>
+            <td class="actions">
+              <button title="مشاهده">
+                <span class="material-symbols-sharp">visibility</span>
+              </button>
+              <button title="ویرایش">
+                <span class="material-symbols-sharp">edit</span>
+              </button>
+              <button class="danger" title="حذف">
+                <span class="material-symbols-sharp">delete</span>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </section>
+
+  </main>
+
+  <!-- ================= Right Panel ================= -->
+  <aside class="right-panel">
+
+    <section class="users-control-panel">
+  
+      <header class="panel-header">
+        <h3>وضعیت لحظه‌ای کاربران</h3>
+      </header>
+  
+      <!-- Active Ratio -->
+      <div class="metric-card">
+        <div class="metric-info">
+          <small>کاربران فعال</small>
+          <strong>89%</strong>
+        </div>
+        <div class="progress-ring" style="--value: 89"></div>
+      </div>
+  
+      <!-- Alerts -->
+      <div class="alert-card danger">
+        <span class="material-symbols-sharp">warning</span>
+        <div>
+          <strong>14 کاربر گزارش شده</strong>
+          <small>نیاز به بررسی فوری</small>
+        </div>
+      </div>
+  
+      <!-- Activity -->
+      <div class="activity-card">
+        <small>فعالیت امروز</small>
+        <strong>+124 ورود موفق</strong>
+      </div>
+  
+      <!-- Quick Actions -->
+      <div class="quick-actions">
+        <button class="quick-btn danger">
+          <span class="material-symbols-sharp">block</span>
+          مسدودسازی سریع
+        </button>
+  
+        <button class="quick-btn success">
+          <span class="material-symbols-sharp">person_add</span>
+          افزودن کاربر
+        </button>
+      </div>
+  
+    </section>
+  
+  </aside>
+    
+</div>
+<script src="./js/theme.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>تحلیل و گزارش‌ها</title>
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" />
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="./css/admin_main.css" />
+  <link rel="stylesheet" href="./css/admin_reports.css" />
+</head>
+
+<body>
+
+<div class="admin-reports container">
+
+  <!-- ================= Sidebar ================= -->
+  <aside class="sidebar-area">
+    <div class="top">
+      <h2>پنل ادمین</h2>
+    </div>
+
+    <div class="user-card">
+      <div class="avatar-wrapper">
+        <span class="material-symbols-sharp">admin_panel_settings</span>
+      </div>
+      <div class="user-info">
+        <strong>ادمین سیستم</strong>
+        <small>admin@system.com</small>
+      </div>
+    </div>
+
+    <nav class="sidebar">
+      <div class="menu-group">
+        <a href="./admin_dashboard.html">
+          <span class="material-symbols-sharp">dashboard</span>
+          <h3>داشبورد</h3>
+        </a>
+        
+        <a href="./admin_users.html">
+          <span class="material-symbols-sharp">group</span>
+          <h3>کاربران</h3>
+        </a>
+
+        <a href="./admin_clients.html">
+          <span class="material-symbols-sharp">person_heart</span>
+          <h3>مراجعین</h3>
+        </a>
+
+        <a href="./admin_doctors.html">
+          <span class="material-symbols-sharp">medical_services</span>
+          <h3>دکترها</h3>
+        </a>
+
+        <a href="./admin_sessions.html">
+          <span class="material-symbols-sharp">event</span>
+          <h3>جلسات</h3>
+        </a>
+
+        <a href="./admin_tests.html">
+          <span class="material-symbols-sharp">quiz</span>
+          <h3>آزمون‌ها</h3>
+        </a>
+
+        <a href="./admin_payments.html">
+          <span class="material-symbols-sharp">payments</span>
+          <h3>پرداخت‌ها</h3>
+        </a>
+
+        <a class="active" href="./admin_reports.html">
+          <span class="material-symbols-sharp">analytics</span>
+          <h3>گزارش‌ها</h3>
+        </a>
+      </div>
+
+      <div class="menu-group secondary">
+        <a href="./admin_settings.html">
+          <span class="material-symbols-sharp">settings</span>
+          <h3>تنظیمات</h3>
+        </a>
+
+        <a class="logout">
+          <span class="material-symbols-sharp">logout</span>
+          <h3>خروج</h3>
+        </a>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- ================= Main ================= -->
+  <main class="content-area reports-page">
+
+    <!-- ===== Header ===== -->
+    <header class="dashboard-header">
+
+      <button class="menu-toggle" id="menuToggle">
+        <span class="material-symbols-sharp">menu</span>
+      </button>
+      
+        <div class="title-box">
+          <h2>تحلیل و گزارش‌ها</h2>
+          <p class="page-desc">بررسی عملکرد سیستم، کاربران و دکترها</p>
+        </div>
+
+        <div class="header-actions">
+          <button class="primary-btn">
+            <span class="material-symbols-sharp">download</span>
+          </button>
+          <button class="notification-btn">
+            <span class="material-symbols-sharp">notifications</span>
+          </button>
+        </div>
+      
+
+    </header>
+
+    <!-- ===== Overview KPIs ===== -->
+    <section class="overview">
+
+      <div class="card success">
+        <span class="material-symbols-sharp">trending_up</span>
+        <h3>رشد ماهانه</h3>
+        <h1>+18%</h1>
+        <div class="trend up">نسبت به ماه قبل</div>
+      </div>
+
+      <div class="card">
+        <span class="material-symbols-sharp">swap_horiz</span>
+        <h3>نرخ تبدیل</h3>
+        <h1>34%</h1>
+      </div>
+
+      <div class="card warning">
+        <span class="material-symbols-sharp">psychology</span>
+        <h3>میانگین عملکرد دکترها</h3>
+        <h1>4.6</h1>
+      </div>
+
+      <div class="card danger">
+        <span class="material-symbols-sharp">person_off</span>
+        <h3>ریزش کاربران</h3>
+        <h1>7%</h1>
+      </div>
+
+    </section>
+
+    <!-- ===== Filters ===== -->
+    <section class="toolbar-wrapper">
+      <div class="toolbar">
+
+        <select>
+          <option>بازه زمانی</option>
+          <option>۷ روز اخیر</option>
+          <option>۳۰ روز اخیر</option>
+          <option>۳ ماه اخیر</option>
+        </select>
+
+        <select>
+          <option>نوع گزارش</option>
+          <option>کاربران</option>
+          <option>دکترها</option>
+          <option>مالی</option>
+        </select>
+
+        <button class="primary-btn">
+          اعمال فیلتر
+        </button>
+
+      </div>
+    </section>
+
+    <!-- ===== Charts Section ===== -->
+    <section class="charts-grid">
+
+      <!-- Power BI Embed Area -->
+      <div class="chart-box large">
+        <h3>رشد سیستم (Power BI)</h3>
+
+        <!-- اتصال Power BI -->
+        <div class="powerbi-embed">
+          <!-- iframe یا Power BI JS SDK اینجا قرار می‌گیرد -->
+        </div>
+      </div>
+
+      <div class="chart-box">
+        <h3>رفتار کاربران</h3>
+        <div class="chart-placeholder">
+          نمودار تعامل کاربران
+        </div>
+      </div>
+
+      <div class="chart-box">
+        <h3>عملکرد دکترها</h3>
+        <div class="chart-placeholder">
+          مقایسه عملکرد دکترها
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ===== Reports Table ===== -->
+    <section class="table">
+
+      <div class="section-title">
+        <h3>گزارش‌های تولیدشده</h3>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>عنوان گزارش</th>
+            <th>نوع</th>
+            <th>تاریخ</th>
+            <th>خروجی</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td data-label="عنوان گزارش">گزارش عملکرد ماهانه</td>
+            <td data-label="نوع">سیستمی</td>
+            <td data-label="تاریخ">۱۴۰۳/۰۹/۲۰</td>
+            <td class="actions">
+              <button><span class="material-symbols-sharp">picture_as_pdf</span></button>
+              <button><span class="material-symbols-sharp">table_view</span></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </section>
+
+  </main>
+
+  <!-- ================= Right Panel ================= -->
+  <aside class="right-panel reports-panel">
+
+    <section class="panel-box">
+      <h3>Insight مدیریتی</h3>
+      <p>بیشترین رشد مربوط به دکترهای تازه‌وارد است.</p>
+    </section>
+
+    <section class="panel-box">
+      <h3>هشدار تحلیلی</h3>
+      <p>نرخ ریزش کاربران در بازه ۳۰ روزه افزایش یافته.</p>
+    </section>
+
+    <section class="panel-box">
+      <h3>خروجی سریع</h3>
+      <button class="outline-btn full">PDF</button>
+      <button class="outline-btn full">Excel</button>
+    </section>
+
+  </aside>
+
+</div>
+
+<script src="./js/theme.js"></script>
+</body>
+</html>

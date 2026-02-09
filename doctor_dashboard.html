@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>داشبورد دکتر</title>
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" />
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="./css/doctor_dashboard.css" />
+  <link rel="stylesheet" href="./css/admin_main.css">
+</head>
+
+<body>
+
+<div class="doctor-dashboard container">
+
+  <!-- ================= Sidebar ================= -->
+  <aside class="sidebar-area">
+    <div class="top">
+      <h2>پنل دکتر</h2>
+    </div>
+
+    <div class="user-card">
+      <div class="avatar-wrapper">
+        <span class="material-symbols-sharp">medical_services</span>
+      </div>
+      <div class="user-info">
+        <strong class="user-name">دکتر سارا محمدی</strong>
+        <span class="user-email">doctor@gmail.com</span>
+      </div>
+    </div>
+
+    <nav class="sidebar">
+      <div class="menu-group">
+        <a class="active" href="./doctor_dashboard.html">
+          <span class="material-symbols-sharp">dashboard</span>
+          <h3>داشبورد</h3>
+        </a>
+
+        <a href="./doctor_patients.html">
+          <span class="material-symbols-sharp">groups</span>
+          <h3>مراجعین</h3>
+        </a>
+
+        <a href="./doctor_results.html">
+          <span class="material-symbols-sharp">assignment</span>
+          <h3>نتایج آزمون‌ها</h3>
+        </a>
+
+        <a href="./doctor_sessions.html">
+          <span class="material-symbols-sharp">event</span>
+          <h3>جلسات</h3>
+        </a>
+      </div>
+
+      <div class="menu-group secondary">
+        <a href="./doctor_profile.html">
+          <span class="material-symbols-sharp">person</span>
+          <h3>پروفایل</h3>
+        </a>
+
+        <a class="logout">
+          <span class="material-symbols-sharp">logout</span>
+          <h3>خروج</h3>
+        </a>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- ================= Main ================= -->
+  <main class="content-area">
+
+    <!-- Header -->
+    <header class="dashboard-header">
+            
+      <button class="menu-toggle" id="menuToggle">
+        <span class="material-symbols-sharp">menu</span>
+      </button>
+     
+      <div>
+        <h1>داشبورد دکتر</h1>
+        <p class="page-desc">
+          مرور وضعیت مراجعین، جلسات و آزمون‌ها
+        </p>
+      </div>
+
+      <div class="header-actions">
+        <button class="quick-action">
+          <span class="material-symbols-sharp">person_search</span>
+        </button>
+      
+        <button class="quick-action">
+          <span class="material-symbols-sharp">note_add</span>
+        </button>
+      
+        <button id="theme-toggle" class="theme-toggle">
+          <span class="material-symbols-sharp">dark_mode</span>
+        </button>
+        <button class="notification-btn">
+          <span class="material-symbols-sharp">notifications</span>
+          <span class="badge">3</span>
+        </button>
+        
+      </div>
+    </header>
+
+    <!-- ================= Overview ================= -->
+    <section class="overview">
+
+      <div class="card success">
+        <h3>مراجعین فعال</h3>
+        <h1>24</h1>
+      </div>
+
+      <div class="card">
+        <h3>جلسات امروز</h3>
+        <h1>3</h1>
+      </div>
+
+      <div class="card">
+        <h3>آزمون‌های جدید</h3>
+        <h1>5</h1>
+      </div>
+
+      <div class="card warning">
+        <h3>در انتظار بررسی</h3>
+        <h1>2</h1>
+      </div>
+
+    </section>
+  
+    <!-- ================= Action Required ================= -->
+  <section class="actions-required">
+    <h2>نیازمند اقدام</h2>
+
+    <div class="action-card warning">
+      <span class="material-symbols-sharp">assignment_late</span>
+      <div>
+        <strong>۲ نتیجه آزمون</strong>
+        <p>در انتظار ثبت نظر شما</p>
+      </div>
+      <button>مشاهده</button>
+    </div>
+
+    <div class="action-card">
+      <span class="material-symbols-sharp">event_busy</span>
+      <div>
+        <strong>۱ جلسه</strong>
+        <p>بدون ثبت گزارش</p>
+      </div>
+      <button>ثبت گزارش</button>
+    </div>
+  </section>
+
+    <!-- ================= Today Sessions ================= -->
+    <section class="table">
+      <h2>جلسات امروز</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>نام مراجعه‌کننده</th>
+            <th>نوع جلسه</th>
+            <th>ساعت</th>
+            <th>وضعیت</th>
+            <th>عملیات</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td data-label="نام مراجعه‌کننده">مریم احمدی</td>
+            <td data-label="نوع جلسه">مشاوره فردی</td>
+            <td data-label="ساعت">10:30</td>
+            <td data-label="وضعیت" class="done">انجام شده</td>
+            <td data-label="عملیات">
+              <button>مشاهده</button>
+            </td>
+          </tr>
+
+          <tr>
+            <td data-label="نام مراجعه‌کننده">علی رضایی</td>
+            <td data-label="نوع جلسه">بررسی نتایج</td>
+            <td data-label="ساعت">12:00</td>
+            <td data-label="وضعیت" class="waiting">در انتظار</td>
+            <td data-label="عملیات">
+              <button>شروع جلسه</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ================= Recent Tests ================= -->
+    <section class="table">
+      <h2>آخرین آزمون‌ها</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>مراجعه‌کننده</th>
+            <th>عنوان آزمون</th>
+            <th>تاریخ</th>
+            <th>وضعیت</th>
+            <th>عملیات</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td data-label="مراجعه‌کننده">سمیه حسینی</td>
+            <td data-label="عنوان آزمون">افسردگی بک</td>
+            <td data-label="تاریخ">1403/03/01</td>
+            <td data-label="وضعیت" class="waiting">در انتظار بررسی</td>
+            <td data-label="عملیات"><button>بررسی</button></td>
+          </tr>
+
+          <tr>
+            <td data-label="مراجعه‌کننده">محمد کریمی</td>
+            <td data-label="عنوان آزمون">اضطراب</td>
+            <td data-label="تاریخ">1403/02/30</td>
+            <td data-label="وضعیت" class="done">بررسی شده</td>
+            <td data-label="عملیات">-</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+</div>
+
+<script src="./js/theme.js"></script>
+
+</body>
+</html>

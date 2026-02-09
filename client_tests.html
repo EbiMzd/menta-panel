@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>آزمون‌های من</title>
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" />
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="./css/client_tests.css">
+  <link rel="stylesheet" href="./css/admin_main.css">
+</head>
+
+<body>
+
+<div class="client-tests container">
+
+  <!-- ================= Sidebar ================= -->
+  <aside class="sidebar-area">
+      <div class="top">
+        <h2>پنل مراجعه‌کننده</h2>
+      </div>
+      
+      <div class="user-card">
+          <div class="avatar-wrapper">
+            <!-- اگر عکس داشت -->
+            <!-- <img src="user-avatar.jpg" alt="عکس پروفایل مریم احمدی"> -->
+        
+            <!-- اگر عکس نداشت -->
+            <span class="material-symbols-sharp">person</span>
+          </div>
+        
+          <div class="user-info">
+            <strong class="user-name">مریم احمدی</strong>
+            <span class="user-email">maryam@gmail.com</span>
+          </div>
+      </div>
+    
+    <nav class="sidebar">
+        <div class="menu-group">
+            <a href="./client_dashboard.html">
+                <span class="material-symbols-sharp">dashboard</span>
+                <h3>داشبورد</h3>
+            </a>
+
+            <a class="active" href="./client_tests.html">
+                <span class="material-symbols-sharp">quiz</span>
+                <h3>آزمون‌های من</h3>
+            </a>
+
+            <a href="./client_results.html">
+                <span class="material-symbols-sharp">assignment</span>
+                <h3>نتایج</h3>
+            </a>
+        </div>
+        <div class="menu-group secondary">
+            <a href="./client_payments.html">
+                <span class="material-symbols-sharp">payments</span>
+                <h3>پرداخت‌ها</h3>
+            </a>
+
+            <a href="./client_profile.html">
+                <span class="material-symbols-sharp">person</span>
+                <h3>پروفایل</h3>
+            </a>
+
+            <a class="logout">
+                <span class="material-symbols-sharp">logout</span>
+                <h3>خروج</h3>
+            </a>
+        </div>
+    </nav>
+  </aside>
+
+  <!-- ================= Main ================= -->
+  <main class="content-area">
+
+    <!-- Page Header -->
+    <header class="dashboard-header">
+        
+      <button class="menu-toggle" id="menuToggle">
+        <span class="material-symbols-sharp">menu</span>
+      </button>
+     
+        <div class="header-text">
+          <h1>آزمون‌های من</h1>
+          <p class="page-desc">
+            لیست کامل آزمون‌هایی که در آن‌ها شرکت کرده‌اید یا در انتظار تکمیل هستند
+          </p>
+        </div>
+      
+        <div class="header-actions">
+          <button id="theme-toggle" class="theme-toggle" aria-label="تغییر تم">
+            <span class="material-symbols-sharp">dark_mode</span>
+          </button> 
+        </div>
+    </header>      
+
+    <!-- ================= Tests Table ================= -->
+    <section class="table">
+
+      <table>
+        <thead>
+          <tr>
+            <th>نام آزمون</th>
+            <th>توضیحات</th>
+            <th>نوع</th>
+            <th>مدت</th>
+            <th>تاریخ</th>
+            <th>پرداخت</th>
+            <th>وضعیت</th>
+            <th>عملیات</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <!-- Test Item -->
+          <tr>
+            <td data-label="نام آزمون">آزمون اضطراب</td>
+            <td data-label="توضیحات">بررسی سطح اضطراب عمومی</td>
+            <td data-label="نوع">تستی</td>
+            <td data-label="مدت">25 دقیقه</td>
+            <td data-label="تاریخ">1403/02/20</td>
+            <td data-label="پرداخت" class="paid">پرداخت شده</td>
+            <td data-label="وضعیت" class="waiting">در انتظار نتیجه</td>
+            <td data-label="عملیات">
+              <button>مشاهده</button>
+            </td>
+          </tr>
+
+          <!-- Test Item -->
+          <tr>
+            <td data-label="نام آزمون">آزمون شخصیت</td>
+            <td data-label="توضیحات">تحلیل تیپ شخصیتی</td>
+            <td data-label="نوع">تشریحی</td>
+            <td data-label="مدت">40 دقیقه</td>
+            <td data-label="تاریخ">1403/02/18</td>
+            <td data-label="پرداخت" class="unpaid">پرداخت نشده</td>
+            <td data-label="وضعیت" class="done">آماده</td>
+            <td data-label="عملیات">
+              <button>پرداخت</button>
+            </td>
+          </tr>
+
+          <!-- Test Item -->
+          <tr>
+            <td data-label="نام آزمون">آزمون افسردگی</td>
+            <td data-label="توضیحات">بررسی علائم افسردگی</td>
+            <td data-label="نوع">تستی</td>
+            <td data-label="مدت">20 دقیقه</td>
+            <td data-label="تاریخ">—</td>
+            <td data-label="پرداخت" class="paid">پرداخت شده</td>
+            <td data-label="وضعیت" class="danger">ناتمام</td>
+            <td data-label="عملیات">
+              <button>ادامه آزمون</button>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ================= Suggested Tests ================= -->
+    <section class="suggested-tests">
+      <h2>آزمون‌های پیشنهادی</h2>
+
+      <div class="suggested-grid">
+
+        <div class="suggested-card">
+          <h3>آزمون عزت نفس</h3>
+          <p>بررسی میزان اعتماد به نفس و خودباوری</p>
+          <span>⏱ 15 دقیقه</span>
+          <button>شروع آزمون</button>
+        </div>
+
+        <div class="suggested-card">
+          <h3>آزمون استرس شغلی</h3>
+          <p>تحلیل میزان استرس مرتبط با محیط کار</p>
+          <span>⏱ 20 دقیقه</span>
+          <button>مشاهده جزئیات</button>
+        </div>
+
+        <div class="suggested-card">
+          <h3>آزمون رضایت از زندگی</h3>
+          <p>ارزیابی کیفیت کلی زندگی</p>
+          <span>⏱ 10 دقیقه</span>
+          <button>شروع آزمون</button>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+</div>
+
+<script src="./js/theme.js"></script>
+<script src="./js/client.js"></script>
+
+</body>
+</html>

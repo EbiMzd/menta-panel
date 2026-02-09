@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>نتایج آزمون‌ها</title>
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" />
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="./css/client_results.css">
+  <link rel="stylesheet" href="./css/admin_main.css">
+</head>
+
+<body>
+
+<div class="client-results container">
+
+  <!-- ================= Sidebar ================= -->
+  <aside class="sidebar-area">
+    <div class="top">
+      <h2>پنل مراجعه‌کننده</h2>
+    </div>
+
+    <div class="user-card">
+      <div class="avatar-wrapper">
+        <span class="material-symbols-sharp">person</span>
+      </div>
+      <div class="user-info">
+        <strong class="user-name">مریم احمدی</strong>
+        <span class="user-email">maryam@gmail.com</span>
+      </div>
+    </div>
+
+    <nav class="sidebar">
+      <div class="menu-group">
+        <a href="./client_dashboard.html">
+          <span class="material-symbols-sharp">dashboard</span>
+          <h3>داشبورد</h3>
+        </a>
+
+        <a href="./client_tests.html">
+          <span class="material-symbols-sharp">quiz</span>
+          <h3>آزمون‌های من</h3>
+        </a>
+
+        <a class="active" href="./client_results.html">
+          <span class="material-symbols-sharp">assignment</span>
+          <h3>نتایج</h3>
+        </a>
+      </div>
+
+      <div class="menu-group secondary">
+        <a href="./client_payments.html">
+          <span class="material-symbols-sharp">payments</span>
+          <h3>پرداخت‌ها</h3>
+        </a>
+
+        <a href="./client_profile.html">
+          <span class="material-symbols-sharp">person</span>
+          <h3>پروفایل</h3>
+        </a>
+
+        <a class="logout">
+          <span class="material-symbols-sharp">logout</span>
+          <h3>خروج</h3>
+        </a>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- ================= Main ================= -->
+  <main class="content-area">
+
+    <!-- Header -->
+    <header class="dashboard-header">
+         
+      <button class="menu-toggle" id="menuToggle">
+        <span class="material-symbols-sharp">menu</span>
+      </button>
+     
+      <div>
+        <h1>نتایج آزمون‌ها</h1>
+        <p class="page-desc">
+          مشاهده نتایج آزمون‌ها و نظرات درمانگر
+        </p>
+      </div>
+
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="تغییر تم">
+          <span class="material-symbols-sharp">dark_mode</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ================= Results Table ================= -->
+    <section class="table">
+
+      <table>
+        <thead>
+          <tr>
+            <th>نام آزمون</th>
+            <th>نوع</th>
+            <th>تاریخ</th>
+            <th>وضعیت</th>
+            <th>نظر درمانگر</th>
+            <th>عملیات</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td data-label="نام آزمون">آزمون اضطراب</td>
+            <td data-label="نوع">تستی</td>
+            <td data-label="تاریخ">1403/02/20</td>
+            <td data-label="وضعیت" class="done">نتیجه آماده</td>
+            <td data-label="نظر درمانگر" class="done">ثبت شده/ مشاهده</td>
+            <td data-label="عملیات">
+              <button>دریافت نتیجه</button>
+            </td>
+          </tr>
+
+          <tr>
+            <td data-label="نام آزمون">آزمون شخصیت</td>
+            <td data-label="نوع">تشریحی</td>
+            <td data-label="تاریخ">1403/02/18</td>
+            <td data-label="وضعیت" class="waiting">نتیجه آماده</td>
+            <td data-label="نظر درمانگر" class="waiting">ثبت نشده / درخواست نظر</td>
+            <td data-label="عملیات">
+              <button>دریافت نتیجه</button>
+            </td>
+          </tr>
+
+          <tr>
+            <td data-label="نام آزمون">آزمون افسردگی</td>
+            <td data-label="نوع">تستی</td>
+            <td data-label="تاریخ">1403/01/30</td>
+            <td data-label="وضعیت" class="danger">پرداخت نشده</td>
+            <td data-label="نظر درمانگر">—</td>
+            <td data-label="عملیات">
+              <button disabled>پرداخت</button>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </section>
+
+    <section class="result-meta">
+        <h2>مشخصات آزمون</h2>
+      
+        <table class="result-table">
+          <tr>
+            <th>نام آزمون</th>
+            <td>آزمون اضطراب</td>
+          </tr>
+          <tr>
+            <th>نوع آزمون</th>
+            <td>تستی</td>
+          </tr>
+          <tr>
+            <th>تاریخ انجام</th>
+            <td>1403/02/20 - 14:30</td>
+          </tr>
+          <tr>
+            <th>نمره نهایی</th>
+            <td><strong>سطح اضطراب: متوسط</strong></td>
+          </tr>
+          <tr>
+            <th>درمانگر</th>
+            <td>دکتر احمدی</td>
+          </tr>
+          <tr>
+            <th>وضعیت نظر</th>
+            <td class="done">ثبت شده</td>
+          </tr>
+        </table>
+    </section>
+
+    <!-- ================= doctor section ================= -->   
+    <section class="doctor-section">
+        <h2>نظر درمانگر</h2>
+      
+        <!-- اگر نظر ثبت شده -->
+        <div class="doctor-comment-box">
+          <p>
+            علائم اضطراب شما در سطح متوسط قرار دارد. پیشنهاد می‌شود جلسات
+            مشاوره به‌صورت هفتگی ادامه پیدا کند.
+          </p>
+          <span class="comment-date">ثبت شده در 1403/02/22</span>
+        </div>
+      
+        <!-- اگر نظر ثبت نشده -->
+        <!--
+        <div class="doctor-request">
+          <p>هنوز نظری برای این آزمون ثبت نشده است.</p>
+          <button class="primary">درخواست نظر درمانگر</button>
+        </div>
+        -->
+    </section>
+  </main>
+
+</div>
+
+<script src="./js/theme.js"></script>
+<script src="./js/client_results.js"></script>
+
+</body>
+</html>
